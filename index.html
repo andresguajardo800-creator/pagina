@@ -1,192 +1,235 @@
-<!-- FUENTES Y ESTILOS CALIPSO -->
+<!-- INCLUSIÓN AUTOMÁTICA DE BOOTSTRAP Y FONT-AWESOME PARA EVITAR DESORDEN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-/* Renderizado nítido de letras */
-body, #wrap, section, div, p, h1, h2, h3, h4, h5, h6, span, a, li {
+/* Reset de tipografía y visualización */
+.vf-wrapper, .vf-wrapper * {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-    -webkit-font-smoothing: antialiased !important;
-    -moz-osx-font-smoothing: grayscale !important;
+    box-sizing: border-box !important;
 }
 
-/* PALETA COLOR CALIPSO */
-.bg-calipso-dark {
+/* PALETA Y ESTILOS EN COLOR CALIPSO */
+.vf-wrapper {
     background-color: #003B46 !important; /* Fondo Principal Calipso */
-}
-.bg-calipso-card {
-    background-color: #002A32 !important; /* Tarjetas en Calipso Oscuro */
-}
-.text-calipso-light {
-    color: #00E5FF !important; /* Detalles y Destacados Cian/Calipso Neón */
-    text-shadow: 0 0 12px rgba(0, 229, 255, 0.4);
-}
-.border-calipso-glow {
-    border: 2px solid #00E5FF !important;
-    box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
-}
-.border-calipso-light {
-    border: 1px solid #005A68 !important;
-}
-.text-high-contrast {
     color: #FFFFFF !important;
+    width: 100% !important;
+    min-height: 100vh;
 }
-.text-muted-bright {
+
+.vf-card {
+    background-color: #002A32 !important; /* Tarjetas Calipso Oscuro */
+    border: 1px solid #005A68 !important;
+    border-radius: 16px !important;
+    padding: 24px !important;
+    transition: all 0.3s ease;
+}
+
+.vf-card:hover {
+    transform: translateY(-6px);
+    border-color: #00E5FF !important;
+    box-shadow: 0 10px 25px rgba(0, 229, 255, 0.25) !important;
+}
+
+.vf-card-glow {
+    border: 2px solid #00E5FF !important;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.2) !important;
+}
+
+.vf-text-cyan {
+    color: #00E5FF !important;
+    text-shadow: 0 0 12px rgba(0, 229, 255, 0.35);
+}
+
+.vf-text-muted {
     color: #B2EBF2 !important;
 }
 
-/* Tarjetas y Animaciones */
-.card-plan-hover {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+/* Botón WhatsApp */
+.vf-btn-whatsapp {
+    background-color: #25D366 !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    border-radius: 50px !important;
+    padding: 12px 28px !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
 }
-.card-plan-hover:hover {
-    transform: translateY(-8px);
-    border-color: #00E5FF !important;
-    box-shadow: 0 15px 25px rgba(0, 229, 255, 0.25) !important;
+
+.vf-btn-whatsapp:hover {
+    background-color: #20ba5a !important;
+    color: #FFFFFF !important;
 }
+
+.vf-btn-outline {
+    border: 2px solid #FFFFFF !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    border-radius: 50px !important;
+    padding: 12px 28px !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+}
+
+.vf-btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #FFFFFF !important;
+}
+
+/* Insignias / Badges */
+.vf-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+}
+.vf-badge-green { background-color: #25D366; color: #FFFFFF; }
+.vf-badge-cyan { background-color: #00E5FF; color: #002A32; }
 </style>
 
-<div class="w-100 bg-calipso-dark text-white p-0 m-0">
+<div class="vf-wrapper py-4">
 
-    <!-- HERO SECTION EN FONDO CALIPSO -->
-    <section class="py-5 border-bottom border-calipso-light position-relative overflow-hidden bg-calipso-dark">
-        <div class="container py-4">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-7 text-center text-lg-start">
-                    <span class="badge bg-success text-white rounded-pill px-3 py-2 mb-3 fw-bold fs-6 shadow-sm">
-                        <i class="fa fa-bolt me-1"></i> Cobertura en todo Chile • Instalación Gratis
-                    </span>
-                    <h1 class="display-3 fw-extrabold mb-3 text-high-contrast" style="letter-spacing: -1px;">
-                        La fibra óptica ultra rápida que <span class="text-calipso-light">acelera tu hogar.</span>
-                    </h1>
-                    <p class="lead mb-4 text-muted-bright fs-5 fw-normal">
-                        Conéctate a la red de fibra más estable de Chile. Con WiFi ilimitado, simetría total y la mejor experiencia de televisión en alta definición.
-                    </p>
+    <!-- HERO SECTION -->
+    <section class="container py-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7 text-start">
+                
+                <span class="vf-badge vf-badge-green mb-3">
+                    <i class="fa-solid fa-bolt me-1"></i> Cobertura en todo Chile • Instalación Gratis
+                </span>
 
-                    <!-- Pilares Diferenciadores -->
-                    <div class="d-flex flex-wrap gap-2 mb-4 justify-content-center justify-content-lg-start">
-                        <span class="badge bg-calipso-card border border-calipso-light text-high-contrast px-3 py-2"><i class="fa fa-check text-success me-1"></i> Sin contrato de amarra</span>
-                        <span class="badge bg-calipso-card border border-calipso-light text-high-contrast px-3 py-2"><i class="fa fa-check text-success me-1"></i> Tarifa fija sin subidas</span>
-                        <span class="badge bg-calipso-card border border-calipso-light text-high-contrast px-3 py-2"><i class="fa fa-check text-success me-1"></i> Soporte 24/7 en WhatsApp</span>
-                    </div>
+                <h1 class="display-3 fw-bold text-white mb-3" style="letter-spacing: -1px;">
+                    La fibra óptica ultra rápida que <span class="vf-text-cyan">acelera tu hogar.</span>
+                </h1>
 
-                    <!-- Destacado Promo 600M -->
-                    <div class="p-3 bg-calipso-card rounded-3 border-calipso-glow mb-4 d-inline-block text-start w-100 shadow-lg" style="max-width: 480px;">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div>
-                                <span class="badge bg-warning text-dark fw-bold mb-1">⚡ PROMO DESTACADA</span>
-                                <h3 class="h3 mb-0 fw-bold text-high-contrast">600 MEGAS x <span class="text-calipso-light">$12.990</span> <small class="fs-6 text-muted-bright">/mes</small></h3>
-                                <span class="text-success fw-bold fs-6"><i class="fa fa-check-circle me-1"></i> Instalación GRATIS</span>
-                            </div>
-                        </div>
-                    </div>
+                <p class="fs-5 vf-text-muted mb-4">
+                    Conéctate a la red de fibra más estable de Chile. Con WiFi ilimitado, simetría total y la mejor experiencia de televisión en alta definición.
+                </p>
 
-                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
-                        <a href="https://wa.me/56965840930?text=Hola,%20quiero%20consultar%20cobertura%20para%20Velofibra" target="_blank" class="btn btn-success btn-lg fw-bold rounded-pill px-4 py-3 shadow">
-                            <i class="fa fa-whatsapp me-2 fs-5"></i> +56 9 6584 0930
-                        </a>
-                        <a href="#planes-internet" class="btn btn-outline-light btn-lg rounded-pill px-4 py-3 fw-semibold">
-                            Ver Planes
-                        </a>
-                    </div>
+                <!-- Beneficios principales -->
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                    <span class="vf-card py-2 px-3 fs-6"><i class="fa-solid fa-check text-success me-2"></i>Sin contrato de amarra</span>
+                    <span class="vf-card py-2 px-3 fs-6"><i class="fa-solid fa-check text-success me-2"></i>Tarifa fija sin subidas</span>
+                    <span class="vf-card py-2 px-3 fs-6"><i class="fa-solid fa-check text-success me-2"></i>Soporte 24/7 en WhatsApp</span>
                 </div>
 
-                <div class="col-lg-5 text-center">
-                    <div class="p-5 bg-calipso-card rounded-4 border-calipso-glow shadow-lg">
-                        <i class="fa fa-shield text-calipso-light display-1 mb-4"></i>
-                        <h3 class="fw-bold text-high-contrast fs-2 mb-2">¿Por qué Velofibra?</h3>
-                        <p class="text-muted-bright fs-6 mb-0">Sin letras chicas ni aumentos sorpresa a los 6 meses. Disfruta la red simétrica más estable para gaming, teletrabajo y streaming 4K sin interrupciones.</p>
-                    </div>
+                <!-- Tarjeta Promo -->
+                <div class="vf-card vf-card-glow mb-4" style="max-width: 460px;">
+                    <span class="vf-badge vf-badge-cyan mb-2">⚡ PROMO DESTACADA</span>
+                    <h3 class="h3 fw-bold text-white mb-0">600 MEGAS x <span class="vf-text-cyan">$12.990</span> <small class="fs-6 vf-text-muted">/mes</small></h3>
+                    <span class="text-success fw-bold fs-6 mt-1 d-block"><i class="fa-solid fa-circle-check me-1"></i> Instalación GRATIS</span>
+                </div>
+
+                <!-- Botones CTA -->
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="https://wa.me/56965840930?text=Hola,%20quiero%20consultar%20cobertura%20para%20Velofibra" target="_blank" class="vf-btn-whatsapp fs-5">
+                        <i class="fa-brands fa-whatsapp me-2"></i> +56 9 6584 0930
+                    </a>
+                    <a href="#planes-internet" class="vf-btn-outline fs-5">
+                        Ver Planes
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="col-lg-5 text-center">
+                <div class="vf-card vf-card-glow p-5">
+                    <i class="fa-solid fa-shield-halved vf-text-cyan display-1 mb-4"></i>
+                    <h3 class="fw-bold text-white fs-2 mb-3">¿Por qué Velofibra?</h3>
+                    <p class="vf-text-muted fs-6 mb-0">Sin letras chicas ni aumentos sorpresa a los 6 meses. Disfruta la red simétrica más estable para gaming, teletrabajo y streaming 4K sin interrupciones.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PLANES SOLO INTERNET EN FONDO CALIPSO -->
-    <section id="planes-internet" class="py-5 border-bottom border-calipso-light bg-calipso-dark">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <h2 class="display-4 fw-bold mb-2 text-high-contrast">Planes Solo <span class="text-calipso-light">Fibra Óptica</span></h2>
-                <p class="text-muted-bright fs-5">Navegación ultra rápida y 100% simétrica para tu casa</p>
+    <!-- SECCIÓN DE PLANES -->
+    <section id="planes-internet" class="container py-5 border-top border-secondary">
+        <div class="text-center mb-5">
+            <h2 class="display-4 fw-bold text-white">Planes Solo <span class="vf-text-cyan">Fibra Óptica</span></h2>
+            <p class="vf-text-muted fs-5">Navegación ultra rápida y 100% simétrica para tu casa</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            
+            <!-- Plan 600 Megas -->
+            <div class="col-lg-4 col-md-6">
+                <div class="vf-card vf-card-glow h-100 d-flex flex-column text-start">
+                    <span class="vf-badge vf-badge-cyan mb-3 w-fit">MÁS POPULAR</span>
+                    <h3 class="fw-bold text-white h3 mb-1">600 MEGAS</h3>
+                    <p class="vf-text-muted fs-6 mb-3">Ideal para teletrabajo y streaming HD</p>
+                    <div class="my-3 pb-3 border-bottom border-secondary">
+                        <span class="display-5 fw-bold vf-text-cyan">$12.990</span>
+                        <span class="vf-text-muted fs-6">/ mes</span>
+                    </div>
+                    <ul class="list-unstyled my-3 text-white fs-6">
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> <strong>600 Mbps</strong> Simétricos</li>
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> Router WiFi Ilimitado</li>
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> <strong>Instalación GRATIS</strong></li>
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> Sin contrato de amarra</li>
+                    </ul>
+                    <a href="https://wa.me/56965840930?text=Hola,%20quiero%20el%20Plan%20de%20600%20Megas%20por%20$12.990" target="_blank" class="vf-btn-whatsapp text-center mt-auto w-100">
+                        <i class="fa-brands fa-whatsapp me-2"></i> Contratar Ahora
+                    </a>
+                </div>
             </div>
-            <div class="row g-4 justify-content-center">
-                
-                <!-- Plan 600 Megas -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card bg-calipso-card text-white border-calipso-glow h-100 p-4 card-plan-hover rounded-4">
-                        <span class="badge bg-info text-dark fw-bold w-fit mb-3 px-3 py-2 fs-6">MÁS POPULAR</span>
-                        <h3 class="h3 fw-bold text-high-contrast mb-1">600 MEGAS</h3>
-                        <p class="text-muted-bright fs-6 mb-3">Ideal para teletrabajo y streaming HD</p>
-                        <div class="my-3 pb-3 border-bottom border-calipso-light">
-                            <span class="display-4 fw-bold text-calipso-light">$12.990</span>
-                            <span class="text-muted-bright fs-5">/ mes</span>
-                        </div>
-                        <ul class="list-unstyled my-4 text-start fs-6 text-high-contrast">
-                            <li class="mb-3"><i class="fa fa-check-circle text-success me-2 fs-5"></i> <strong>600 Mbps</strong> Simétricos</li>
-                            <li class="mb-3"><i class="fa fa-check-circle text-success me-2 fs-5"></i> Router WiFi Ilimitado</li>
-                            <li class="mb-3"><i class="fa fa-check-circle text-success me-2 fs-5"></i> <strong>Instalación GRATIS</strong></li>
-                            <li class="mb-3"><i class="fa fa-check-circle text-success me-2 fs-5"></i> Sin contrato de amarra</li>
-                        </ul>
-                        <a href="https://wa.me/56965840930?text=Hola,%20quiero%20el%20Plan%20de%20600%20Megas%20por%20$12.990" target="_blank" class="btn btn-success w-100 fw-bold rounded-pill py-3 mt-auto fs-6">
-                            <i class="fa fa-whatsapp me-2 fs-5"></i> Contratar Ahora
-                        </a>
-                    </div>
-                </div>
 
-                <!-- Plan 800 Megas -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card bg-calipso-card text-white border-calipso-light h-100 p-4 card-plan-hover rounded-4">
-                        <span class="badge bg-secondary text-white fw-semibold w-fit mb-3 px-3 py-2 fs-6">GAMER & PRO</span>
-                        <h3 class="h3 fw-bold text-high-contrast mb-1">800 MEGAS</h3>
-                        <p class="text-muted-bright fs-6 mb-3">Para gamers y múltiples dispositivos</p>
-                        <div class="my-3 pb-3 border-bottom border-calipso-light">
-                            <span class="display-4 fw-bold text-calipso-light">$17.990</span>
-                            <span class="text-muted-bright fs-5">/ mes</span>
-                        </div>
-                        <ul class="list-unstyled my-4 text-start fs-6 text-high-contrast">
-                            <li class="mb-3"><i class="fa fa-check-circle text-success me-2 fs-5"></i> <strong>800 Mbps</strong> Simétricos</li>
-                            <li class="mb-3"><i class="fa fa-check-circle text-success me-2 fs-5"></i> Latencia Ultra Baja</li>
-                            <li class="mb-3"><i class="fa fa-check-circle text-success me-2 fs-5"></i> <strong>Instalación GRATIS</strong></li>
-                            <li class="mb-3"><i class="fa fa-check-circle text-success me-2 fs-5"></i> Soporte Prioritario 24/7</li>
-                        </ul>
-                        <a href="https://wa.me/56965840930?text=Hola,%20quiero%20el%20Plan%20Gamer%20de%20800%20Megas" target="_blank" class="btn btn-outline-light w-100 fw-bold rounded-pill py-3 mt-auto fs-6">
-                            <i class="fa fa-whatsapp me-2 fs-5"></i> Contratar Ahora
-                        </a>
+            <!-- Plan 800 Megas -->
+            <div class="col-lg-4 col-md-6">
+                <div class="vf-card h-100 d-flex flex-column text-start">
+                    <span class="vf-badge bg-secondary text-white mb-3 w-fit">GAMER & PRO</span>
+                    <h3 class="fw-bold text-white h3 mb-1">800 MEGAS</h3>
+                    <p class="vf-text-muted fs-6 mb-3">Para gamers y múltiples dispositivos</p>
+                    <div class="my-3 pb-3 border-bottom border-secondary">
+                        <span class="display-5 fw-bold vf-text-cyan">$17.990</span>
+                        <span class="vf-text-muted fs-6">/ mes</span>
                     </div>
+                    <ul class="list-unstyled my-3 text-white fs-6">
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> <strong>800 Mbps</strong> Simétricos</li>
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> Latencia Ultra Baja</li>
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> <strong>Instalación GRATIS</strong></li>
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> Soporte Prioritario 24/7</li>
+                    </ul>
+                    <a href="https://wa.me/56965840930?text=Hola,%20quiero%20el%20Plan%20Gamer%20de%20800%20Megas" target="_blank" class="vf-btn-outline text-center mt-auto w-100">
+                        <i class="fa-brands fa-whatsapp me-2"></i> Contratar Ahora
+                    </a>
                 </div>
-
-                <!-- Plan 1 Giga -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card bg-calipso-card text-white border-calipso-light h-100 p-4 card-plan-hover rounded-4">
-                        <span class="badge bg-primary text-white fw-semibold w-fit mb-3 px-3 py-2 fs-6">MÁXIMA POTENCIA</span>
-                        <h3 class="h3 fw-bold text-high-contrast mb-1">1 GIGA (1000 MB)</h3>
-                        <p class="text-muted-bright fs-6 mb-3">Máxima potencia para hogares inteligentes</p>
-                        <div class="my-3 pb-3 border-bottom border-calipso-light">
-                            <span class="display-4 fw-bold text-calipso-light">$22.990</span>
-                            <span class="text-muted-bright fs-5">/ mes</span>
-                        </div>
-                        <ul class="list-unstyled my-4 text-start fs-6 text-high-contrast">
-                            <li class="mb-3"><i class="fa fa-check-circle text-success me-2 fs-5"></i> <strong>1000 Mbps</strong> Simétricos</li>
-                            <li class="mb-3"><i class="fa fa-check-circle text-success me-2 fs-5"></i> Casas Inteligentes</li>
-                            <li class="mb-3"><i class="fa fa-check-circle text-success me-2 fs-5"></i> <strong>Instalación GRATIS</strong></li>
-                            <li class="mb-3"><i class="fa fa-check-circle text-success me-2 fs-5"></i> Router Next-Gen incluido</li>
-                        </ul>
-                        <a href="https://wa.me/56965840930?text=Hola,%20quiero%20el%20Plan%20Ultra%20de%201%20Giga" target="_blank" class="btn btn-outline-light w-100 fw-bold rounded-pill py-3 mt-auto fs-6">
-                            <i class="fa fa-whatsapp me-2 fs-5"></i> Contratar Ahora
-                        </a>
-                    </div>
-                </div>
-
             </div>
+
+            <!-- Plan 1 Giga -->
+            <div class="col-lg-4 col-md-6">
+                <div class="vf-card h-100 d-flex flex-column text-start">
+                    <span class="vf-badge bg-primary text-white mb-3 w-fit">MÁXIMA POTENCIA</span>
+                    <h3 class="fw-bold text-white h3 mb-1">1 GIGA (1000 MB)</h3>
+                    <p class="vf-text-muted fs-6 mb-3">Máxima potencia para hogares inteligentes</p>
+                    <div class="my-3 pb-3 border-bottom border-secondary">
+                        <span class="display-5 fw-bold vf-text-cyan">$22.990</span>
+                        <span class="vf-text-muted fs-6">/ mes</span>
+                    </div>
+                    <ul class="list-unstyled my-3 text-white fs-6">
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> <strong>1000 Mbps</strong> Simétricos</li>
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> Casas Inteligentes</li>
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> <strong>Instalación GRATIS</strong></li>
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> Router Next-Gen incluido</li>
+                    </ul>
+                    <a href="https://wa.me/56965840930?text=Hola,%20quiero%20el%20Plan%20Ultra%20de%201%20Giga" target="_blank" class="vf-btn-outline text-center mt-auto w-100">
+                        <i class="fa-brands fa-whatsapp me-2"></i> Contratar Ahora
+                    </a>
+                </div>
+            </div>
+
         </div>
     </section>
 
 </div>
 
-<!-- BOTÓN FLOTANTE WHATSAPP -->
-<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999;">
-    <a href="https://wa.me/56965840930?text=Hola,%20necesito%20informacion%20sobre%20los%20planes%20de%20Velofibra" target="_blank" class="btn btn-success rounded-circle p-3 shadow-lg d-flex align-items-center justify-content-center" style="width: 65px; height: 65px;">
-        <i class="fa fa-whatsapp fs-1"></i>
+<!-- BOTÓN FLOTANTE DE WHATSAPP -->
+<div style="position: fixed; bottom: 20px; right: 20px; z-index: 99999;">
+    <a href="https://wa.me/56965840930?text=Hola,%20necesito%20informacion%20sobre%20los%20planes%20de%20Velofibra" target="_blank" class="vf-btn-whatsapp d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; border-radius: 50% !important; padding: 0 !important; font-size: 28px;">
+        <i class="fa-brands fa-whatsapp"></i>
     </a>
 </div>
