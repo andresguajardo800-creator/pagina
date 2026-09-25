@@ -1,0 +1,150 @@
+/* ==========================================================================
+   1. IMPORTACIÓN DE FUENTES & CONFIGURACIÓN BASE (ULTRA NITIDEZ)
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Paleta de Colores Velofibra */
+  --vf-bg-dark: #080D1A;         /* Fondo principal azul marino oscuro */
+  --vf-bg-card: #0F172A;         /* Fondo de tarjetas y contenedor */
+  --vf-cyan: #00E5FF;            /* Azul Cian Neón (Acento) */
+  --vf-cyan-hover: #33ECFF;      /* Azul Cian Hover */
+  --vf-whatsapp: #25D366;        /* Verde WhatsApp */
+  --vf-whatsapp-hover: #20ba5a;  /* Verde WhatsApp Hover */
+  --vf-border: #1E293B;          /* Bordes de división sutiles */
+  --vf-text-white: #F8FAFC;      /* Texto de alto contraste */
+  --vf-text-muted: #94A3B8;      /* Texto secundario claro */
+}
+
+/* Renderizado ultra nítido de tipografía en navegadores web */
+html, body, div, p, h1, h2, h3, h4, h5, h6, span, a, li, button {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  text-rendering: optimizeLegibility !important;
+}
+
+body {
+  background-color: var(--vf-bg-dark) !important;
+  color: var(--vf-text-white) !important;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   2. CLASES TIPOGRÁFICAS & TEXTOS
+   ========================================================================== */
+.text-cyan-brand {
+  color: var(--vf-cyan) !important;
+  text-shadow: 0 0 14px rgba(0, 229, 255, 0.35);
+}
+
+.text-high-contrast {
+  color: var(--vf-text-white) !important;
+  font-weight: 700;
+}
+
+.text-muted-bright {
+  color: var(--vf-text-muted) !important;
+}
+
+/* ==========================================================================
+   3. ESTILOS DE FONDOS Y BORDES (FULL WIDTH)
+   ========================================================================== */
+.bg-navy-dark {
+  background-color: var(--vf-bg-dark) !important;
+}
+
+.bg-navy-card {
+  background-color: var(--vf-bg-card) !important;
+}
+
+.border-navy-light {
+  border: 1px solid var(--vf-border) !important;
+}
+
+.border-cyan-brand {
+  border: 2px solid var(--vf-cyan) !important;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.15);
+}
+
+/* ==========================================================================
+   4. TARJETAS DE PLANES & EFECTOS HOVER
+   ========================================================================== */
+.card-plan-hover {
+  background-color: var(--vf-bg-card) !important;
+  border-radius: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+.card-plan-hover:hover {
+  transform: translateY(-8px);
+  border-color: var(--vf-cyan) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 229, 255, 0.25), 0 10px 10px -5px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* ==========================================================================
+   5. BOTONES DE LLAMADA A LA ACCIÓN (CTA)
+   ========================================================================== */
+.btn-whatsapp {
+  background-color: var(--vf-whatsapp) !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  border: none !important;
+  border-radius: 50rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--vf-whatsapp-hover) !important;
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+.btn-cyan-glow {
+  background-color: var(--vf-cyan) !important;
+  color: var(--vf-bg-dark) !important;
+  font-weight: 800 !important;
+  border: none !important;
+  border-radius: 50rem;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-cyan-glow:hover {
+  background-color: var(--vf-cyan-hover) !important;
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.7);
+  transform: scale(1.03);
+}
+
+/* ==========================================================================
+   6. BOTÓN FLOTANTE DE WHATSAPP
+   ========================================================================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--vf-whatsapp);
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 32px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: var(--vf-whatsapp-hover);
+  transform: scale(1.1);
+  color: #FFF;
+}

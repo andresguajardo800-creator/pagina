@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velofibra - Fibra Óptica y Dúo Packs en Chile</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            cyan: '#00E5FF',
+                            dark: '#0B1120',
+                            card: '#151D30',
+                            orange: '#FF5E36',
+                            whatsapp: '#25D366',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow-effect {
+            box-shadow: 0 0 25px rgba(0, 229, 255, 0.2);
+        }
+        .glow-effect-orange {
+            box-shadow: 0 0 25px rgba(255, 94, 54, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-brand-cyan selection:text-brand-dark">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-brand-dark/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-bolt text-brand-cyan text-2xl"></i>
+                <span class="text-2xl font-extrabold tracking-wider text-white">VELO<span class="text-brand-cyan">FIBRA</span></span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8 font-medium text-slate-300">
+                <a href="#solo-internet" class="hover:text-brand-cyan transition">Solo Internet</a>
+                <a href="#duo-packs" class="hover:text-brand-cyan transition">Dúo Packs (Internet + TV)</a>
+                <a href="#cobertura" class="hover:text-brand-cyan transition">Cobertura</a>
+                <a href="#beneficios" class="hover:text-brand-cyan transition">Beneficios</a>
+            </nav>
+
+            <a href="https://wa.me/56965840930?text=Hola,%20quisiera%20consultar%20por%20los%20planes%20de%20Velofibra" 
+               target="_blank" 
+               class="hidden sm:inline-flex items-center space-x-2 bg-brand-whatsapp hover:bg-emerald-600 text-white font-bold py-2.5 px-5 rounded-full transition duration-300 shadow-lg shadow-emerald-900/30">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span>+56 9 6584 0930</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-12 pb-20 md:pt-24 md:pb-32 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-900/20 via-brand-dark to-brand-dark -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-center lg:text-left">
+                    <span class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20">
+                        <i class="fa-solid fa-fire mr-2"></i> Cobertura en todo Chile • Instalación Gratis
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none text-white">
+                        La fibra óptica ultra rápida que <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-blue-500">acelera tu hogar.</span>
+                    </h1>
+                    <p class="text-lg text-slate-300 max-w-xl mx-auto lg:mx-0">
+                        Conéctate a la red de fibra más estable de Chile. Con WiFi ilimitado, simetría total y la mejor experiencia de televisión en alta definición.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#solo-internet" class="bg-brand-orange hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-xl text-center shadow-lg shadow-orange-900/30 transition duration-300 glow-effect-orange">
+                            Ver Planes en mi Zona
+                        </a>
+                        <a href="https://wa.me/56965840930?text=Hola,%20quiero%20más%20información%20de%20Velofibra" 
+                           target="_blank" 
+                           class="bg-brand-card border border-slate-700 hover:border-brand-whatsapp text-white font-semibold px-8 py-4 rounded-xl flex items-center justify-center space-x-2 transition duration-300">
+                            <i class="fa-brands fa-whatsapp text-brand-whatsapp text-xl"></i>
+                            <span>Hablar por WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Graphic/Promo Box -->
+                <div class="relative flex justify-center">
+                    <div class="w-full max-w-md bg-gradient-to-b from-brand-card to-slate-900 p-8 rounded-3xl border border-slate-700 shadow-2xl glow-effect text-center space-y-6">
+                        <div class="bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan font-bold py-1 px-4 rounded-full inline-block text-sm">
+                            ¡OFERTA DESTACADA!
+                        </div>
+                        <div>
+                            <p class="text-sm uppercase tracking-widest text-slate-400 font-semibold">PLAN SOLO FIBRA HOGAR</p>
+                            <h3 class="text-4xl font-extrabold text-white mt-1">600 MEGAS</h3>
+                        </div>
+                        <div class="py-2">
+                            <span class="text-sm text-slate-400 font-medium">x solo</span>
+                            <div class="text-5xl font-black text-white mt-1">$12.990 <span class="text-base text-slate-400 font-normal">/mes</span></div>
+                        </div>
+                        <ul class="text-left space-y-3 text-slate-300 text-sm border-t border-b border-slate-800 py-4">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-cyan mr-3"></i> WiFi Ilimitado de Alta Velocidad</li>
+                            <li class="flex items-center"><li class="flex items-center"><i class="fa-solid fa-check text-brand-cyan mr-3"></i> <strong>INSTALACIÓN GRATIS</strong></li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-cyan mr-3"></i> Simetría de carga y descarga</li>
+                        </ul>
+                        <a href="https://wa.me/56965840930?text=Hola,%20quiero%20el%20Plan%20de%20600%20Megas%20por%20$12.990" 
+                           target="_blank" 
+                           class="block w-full bg-brand-whatsapp hover:bg-emerald-600 text-white font-bold py-3.5 rounded-xl transition duration-300 shadow-lg shadow-emerald-900/40">
+                            <i class="fa-brands fa-whatsapp mr-2"></i> Contratar Ahora por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: SOLO FIBRA HOGAR -->
+    <section id="solo-internet" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Planes Solo Internet Fibra Óptica</h2>
+                <p class="mt-4 text-slate-400 text-lg">Velocidad simétrica para navegar, jugar e ir al máximo sin interrupciones.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-brand-card rounded-2xl p-8 border border-slate-700/80 hover:border-brand-cyan transition duration-300 flex flex-col justify-between relative">
+                    <div class="absolute -top-3 right-6 bg-brand-cyan text-brand-dark text-xs font-bold px-3 py-1 rounded-full uppercase">MÁS POPULAR</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">600 Megas</h3>
+                        <p class="text-slate-400 text-sm mt-1">Ideal para streaming y trabajo remoto</p>
+                        <div class="my-6">
+                            <span class="text-4xl font-extrabold text-white">$12.990</span>
+                            <span class="text-slate-400">/mes</span>
+                        </div>
+                        <ul class="space-y-3 text-slate-300 text-sm mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-cyan mr-3"></i> 600 Mbps Simétricos</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-cyan mr-3"></i> WiFi Ilimitado</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-cyan mr-3"></i> Instalación GRATIS</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-cyan mr-3"></i> Soporte 24/7</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/56965840930?text=Hola,%20me%20interesa%20el%20plan%20Solo%20Internet%20600%20Megas%20de%20$12.990" 
+                       target="_blank" 
+                       class="w-full bg-brand-orange hover:bg-orange-600 text-white font-bold py-3 rounded-xl text-center block transition">
+                        Pedir por WhatsApp
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-brand-card rounded-2xl p-8 border border-slate-700/80 hover:border-brand-cyan transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">800 Megas</h3>
+                        <p class="text-slate-400 text-sm mt-1">Plan Gamer & Pro (Baja Latencia)</p>
+                        <div class="my-6">
+                            <span class="text-4xl font-extrabold text-white">$17.990</span>
+                            <span class="text-slate-400">/mes</span>
+                        </div>
+                        <ul class="space-y-3 text-slate-300 text-sm mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-cyan mr-3"></i> 800 Mbps Simétricos</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-cyan mr-3"></i> Ping Ultra Bajo para Gaming</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-cyan mr-3"></i> Instalación GRATIS</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-cyan mr-3"></i> Múltiples Dispositivos</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/56965840930?text=Hola,%20me%20interesa%20el%20plan%20Gamer%20800%20Megas" 
+                       target="_blank" 
+                       class="w-full bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white font-bold py-3 rounded-xl text-center block transition">
+                        Pedir por WhatsApp
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-brand-card rounded-2xl p-8 border border-slate-700/80 hover:border-brand-cyan transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">1 Giga</h3>
+                        <p class="text-slate-400 text-sm mt-1">Potencia máxima para hogares conectados</p>
+                        <div class="my-6">
+                            <span class="text-4xl font-extrabold text-white">$22.990</span>
+                            <span class="text-slate-400">/mes</span>
+                        </div>
+                        <ul class="space-y-3 text-slate-300 text-sm mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-cyan mr-3"></i> 1000 Mbps Simétricos</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-cyan mr-3"></i> Router de Última Generación</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-cyan mr-3"></i> Instalación GRATIS</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-cyan mr-3"></i> Atención Preferencial</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/56965840930?text=Hola,%20me%20interesa%20el%20plan%20Ultra%201%20Giga" 
+                       target="_blank" 
+                       class="w-full bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white font-bold py-3 rounded-xl text-center block transition">
+                        Pedir por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: DUO PACKS (INTERNET + TV) -->
+    <section id="duo-packs" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-cyan font-semibold text-sm uppercase tracking-wider">ENTRETENIMIENTO COMPLETO</span>
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl mt-2">Planes Dúo (Internet Fibra + TV Ultra HD)</h2>
+                <p class="mt-4 text-slate-400 text-lg">Disfruta de la mejor televisión interactiva junto a la fibra óptica más rápida.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Dúo 1 -->
+                <div class="bg-brand-card rounded-2xl p-8 border border-slate-700 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-white">DÚO 600 MB</h3>
+                            <span class="bg-red-500/20 text-red-400 text-xs font-bold px-2.5 py-1 rounded">PROMO 24% DCTO</span>
+                        </div>
+                        <p class="text-slate-400 text-sm">Descuento aplicado por 6 meses</p>
+                        <div class="my-6">
+                            <span class="text-slate-500 line-through text-lg">$36.990</span>
+                            <div>
+                                <span class="text-4xl font-extrabold text-white">$27.990</span>
+                                <span class="text-slate-400">/mes</span>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 text-slate-300 text-sm mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-tv text-brand-cyan mr-3"></i> Servicio TV HD Incluido</li>
+                            <li class="flex items-center"><i class="fa-solid fa-box text-brand-cyan mr-3"></i> <strong>1 DECO GRATIS</strong></li>
+                            <li class="flex items-center"><i class="fa-solid fa-film text-brand-cyan mr-3"></i> HBO Max Incluido</li>
+                            <li class="flex items-center"><i class="fa-solid fa-truck-fast text-brand-cyan mr-3"></i> Instalación GRATIS</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/56965840930?text=Hola,%20quiero%20contratar%20el%20Duo%20600MB%20+%20TV%20a%20$27.990" 
+                       target="_blank" 
+                       class="w-full bg-brand-whatsapp hover:bg-emerald-600 text-white font-bold py-3 rounded-xl text-center block transition">
+                        Contratar Dúo 600 MB
+                    </a>
+                </div>
+
+                <!-- Dúo 2 (Mejor Valor) -->
+                <div class="bg-brand-card rounded-2xl p-8 border-2 border-brand-cyan flex flex-col justify-between relative shadow-xl glow-effect">
+                    <div class="absolute -top-3 right-6 bg-brand-cyan text-brand-dark text-xs font-bold px-3 py-1 rounded-full uppercase">OPCIÓN AHORRO</div>
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-white">DÚO 800 MB</h3>
+                            <span class="bg-emerald-500/20 text-emerald-400 text-xs font-bold px-2.5 py-1 rounded">PRECIO FIJO</span>
+                        </div>
+                        <p class="text-slate-400 text-sm">Sin sorpresas en la cuenta final</p>
+                        <div class="my-6">
+                            <div class="text-4xl font-extrabold text-white">$37.990</div>
+                            <span class="text-slate-400">/mes para siempre</span>
+                        </div>
+                        <ul class="space-y-3 text-slate-300 text-sm mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-tv text-brand-cyan mr-3"></i> TV Ultra HD con Canales Premium</li>
+                            <li class="flex items-center"><i class="fa-solid fa-box text-brand-cyan mr-3"></i> <strong>1 DECO GRATIS</strong></li>
+                            <li class="flex items-center"><i class="fa-solid fa-play text-brand-cyan mr-3"></i> HBO Max + Paramount+ + UFC</li>
+                            <li class="flex items-center"><i class="fa-solid fa-truck-fast text-brand-cyan mr-3"></i> Instalación GRATIS</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/56965840930?text=Hola,%20quiero%20contratar%20el%20Duo%20800MB%20a%20$37.990%20para%20siempre" 
+                       target="_blank" 
+                       class="w-full bg-brand-orange hover:bg-orange-600 text-white font-bold py-3 rounded-xl text-center block transition shadow-lg">
+                        Contratar Dúo 800 MB
+                    </a>
+                </div>
+
+                <!-- Dúo 3 -->
+                <div class="bg-brand-card rounded-2xl p-8 border border-slate-700 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-white">DÚO 940 MB</h3>
+                            <span class="bg-blue-500/20 text-blue-400 text-xs font-bold px-2.5 py-1 rounded">PROMO 37% DCTO</span>
+                        </div>
+                        <p class="text-slate-400 text-sm">Descuento aplicado x 12 meses</p>
+                        <div class="my-6">
+                            <span class="text-slate-500 line-through text-lg">$52.990</span>
+                            <div>
+                                <span class="text-4xl font-extrabold text-white">$32.990</span>
+                                <span class="text-slate-400">/mes</span>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 text-slate-300 text-sm mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-tv text-brand-cyan mr-3"></i> TV Ultra HD Máxima Cobertura</li>
+                            <li class="flex items-center"><i class="fa-solid fa-box text-brand-cyan mr-3"></i> <strong>1 DECO GRATIS</strong></li>
+                            <li class="flex items-center"><i class="fa-solid fa-clapperboard text-brand-cyan mr-3"></i> Disney+ & HBO Max Incluidos</li>
+                            <li class="flex items-center"><i class="fa-solid fa-truck-fast text-brand-cyan mr-3"></i> Instalación GRATIS</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/56965840930?text=Hola,%20quiero%20contratar%20el%20Duo%20940MB%20+%20TV%20a%20$32.990" 
+                       target="_blank" 
+                       class="w-full bg-brand-whatsapp hover:bg-emerald-600 text-white font-bold py-3 rounded-xl text-center block transition">
+                        Contratar Dúo 940 MB
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COVERAGE CHECKER -->
+    <section id="cobertura" class="py-16 bg-slate-900 border-y border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Consulta tu Factibilidad Técnica</h2>
+            <p class="text-slate-400 mt-2">Verifica si nuestra red de fibra óptica llega a tu calle o comuna en Chile.</p>
+            
+            <div class="mt-8 flex flex-col sm:flex-row gap-3 max-w-2xl mx-auto">
+                <input type="text" placeholder="Ingresa tu comuna y dirección exacta..." class="flex-grow bg-slate-800 text-white px-5 py-4 rounded-xl border border-slate-700 focus:outline-none focus:border-brand-cyan transition">
+                <a href="https://wa.me/56965840930?text=Hola,%20quisiera%20consultar%20cobertura%20en%20mi%20direccion" 
+                   target="_blank" 
+                   class="bg-brand-cyan hover:bg-cyan-400 text-brand-dark font-extrabold px-6 py-4 rounded-xl flex items-center justify-center space-x-2 transition">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Consultar Cobertura</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS SECTION -->
+    <section id="beneficios" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-white">¿Por qué elegir Velofibra?</h2>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-brand-card p-6 rounded-2xl border border-slate-800 text-center">
+                    <div class="w-12 h-12 bg-brand-cyan/10 text-brand-cyan rounded-xl flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-arrows-up-down"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Simetría Total</h3>
+                    <p class="text-slate-400 text-sm">Misma velocidad para subir y bajar archivos. Videollamadas fluidas sin lag.</p>
+                </div>
+
+                <div class="bg-brand-card p-6 rounded-2xl border border-slate-800 text-center">
+                    <div class="w-12 h-12 bg-brand-cyan/10 text-brand-cyan rounded-xl flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-wrench"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Instalación Costo $0</h3>
+                    <p class="text-slate-400 text-sm">Nuestros técnicos conectan tu hogar de forma rápida y sin costo de instalación.</p>
+                </div>
+
+                <div class="bg-brand-card p-6 rounded-2xl border border-slate-800 text-center">
+                    <div class="w-12 h-12 bg-brand-cyan/10 text-brand-cyan rounded-xl flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-gamepad"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Latencia Ultra Baja</h3>
+                    <p class="text-slate-400 text-sm">Conexión directa optimizada para gaming competitivo en servidores locales e internacionales.</p>
+                </div>
+
+                <div class="bg-brand-card p-6 rounded-2xl border border-slate-800 text-center">
+                    <div class="w-12 h-12 bg-brand-cyan/10 text-brand-cyan rounded-xl flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Atención 24/7</h3>
+                    <p class="text-slate-400 text-sm">Soporte directo y rápido por WhatsApp siempre disponible ante cualquier duda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-bolt text-brand-cyan text-xl"></i>
+                <span class="text-xl font-extrabold text-white">VELO<span class="text-brand-cyan">FIBRA</span></span>
+            </div>
+            
+            <div class="text-slate-400 text-sm text-center md:text-left">
+                Ventas y Soporte Técnico Directo por WhatsApp: 
+                <a href="https://wa.me/56965840930" target="_blank" class="text-brand-whatsapp font-bold hover:underline">+56 9 6584 0930</a>
+            </div>
+
+            <p class="text-slate-500 text-xs text-center">
+                © 2026 Velofibra Chile. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP WIDGET -->
+    <a href="https://wa.me/56965840930?text=Hola,%20quisiera%20contratar%20servicios%20de%20Velofibra" 
+       target="_blank" 
+       class="fixed bottom-6 right-6 bg-brand-whatsapp hover:bg-emerald-600 text-white p-4 rounded-full shadow-2xl z-50 flex items-center justify-center transition duration-300 transform hover:scale-110 animate-bounce">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+</body>
+</html>
