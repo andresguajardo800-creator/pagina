@@ -12,44 +12,45 @@
     box-sizing: border-box !important;
 }
 
-/* PALETA Y ESTILOS EN CAFÉ MEDIO / MOCA */
+/* PALETA TELECOM PRO: AZUL NOCHE + CIAN NEÓN */
 .vf-wrapper {
-    background-color: #C4A482 !important; /* Fondo Café Un Poco Más Oscuro */
-    color: #1F150C !important;
+    background-color: #0B132B !important; /* Fondo Azul Noche Profundo */
+    color: #FFFFFF !important;
     width: 100% !important;
     min-height: 100vh;
 }
 
 .vf-card {
-    background-color: #FFFDF9 !important; /* Tarjetas Claro Marfil */
-    border: 1px solid #A88968 !important;
+    background-color: #1C2541 !important; /* Tarjetas Azul Oscuro */
+    border: 1px solid #2B3A67 !important;
     border-radius: 16px !important;
     padding: 24px !important;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(31, 21, 12, 0.1) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
 }
 
 .vf-card:hover {
     transform: translateY(-6px);
-    border-color: #5C3A21 !important;
-    box-shadow: 0 12px 25px rgba(92, 58, 33, 0.25) !important;
+    border-color: #00F0FF !important;
+    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.25) !important;
 }
 
 .vf-card-glow {
-    border: 2px solid #5C3A21 !important;
-    box-shadow: 0 8px 20px rgba(92, 58, 33, 0.22) !important;
+    border: 2px solid #00F0FF !important;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.2) !important;
 }
 
 .vf-text-title {
-    color: #1F150C !important;
+    color: #FFFFFF !important;
 }
 
-.vf-text-accent {
-    color: #5C3A21 !important; /* Café Oscuro Profundo para destacar */
+.vf-text-cyan {
+    color: #00F0FF !important; /* Cian Neón para resaltar velocidad */
+    text-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
 }
 
 .vf-text-muted {
-    color: #3D2B1D !important;
+    color: #A3CEF1 !important;
 }
 
 /* Botón WhatsApp */
@@ -61,7 +62,7 @@
     padding: 12px 28px !important;
     text-decoration: none !important;
     display: inline-block !important;
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
 }
 
 .vf-btn-whatsapp:hover {
@@ -70,8 +71,8 @@
 }
 
 .vf-btn-outline {
-    border: 2px solid #1F150C !important;
-    color: #1F150C !important;
+    border: 2px solid #00F0FF !important;
+    color: #00F0FF !important;
     font-weight: 600 !important;
     border-radius: 50px !important;
     padding: 12px 28px !important;
@@ -80,8 +81,8 @@
 }
 
 .vf-btn-outline:hover {
-    background-color: #1F150C !important;
-    color: #FFFFFF !important;
+    background-color: #00F0FF !important;
+    color: #0B132B !important;
 }
 
 /* Insignias / Badges */
@@ -93,7 +94,7 @@
     font-weight: 700;
 }
 .vf-badge-green { background-color: #25D366; color: #FFFFFF; }
-.vf-badge-brown { background-color: #5C3A21; color: #FFFFFF; }
+.vf-badge-cyan { background-color: #00F0FF; color: #0B132B; }
 </style>
 
 <div class="vf-wrapper py-4">
@@ -108,7 +109,7 @@
                 </span>
 
                 <h1 class="display-3 fw-bold vf-text-title mb-3" style="letter-spacing: -1px;">
-                    La fibra óptica ultra rápida que <span class="vf-text-accent">acelera tu hogar.</span>
+                    La fibra óptica ultra rápida que <span class="vf-text-cyan">acelera tu hogar.</span>
                 </h1>
 
                 <p class="fs-5 vf-text-muted mb-4">
@@ -124,8 +125,8 @@
 
                 <!-- Tarjeta Promo -->
                 <div class="vf-card vf-card-glow mb-4" style="max-width: 460px;">
-                    <span class="vf-badge vf-badge-brown mb-2">⚡ PROMO DESTACADA</span>
-                    <h3 class="h3 fw-bold vf-text-title mb-0">600 MEGAS x <span class="vf-text-accent">$12.990</span> <small class="fs-6 vf-text-muted">/mes</small></h3>
+                    <span class="vf-badge vf-badge-cyan mb-2">⚡ PROMO DESTACADA</span>
+                    <h3 class="h3 fw-bold vf-text-title mb-0">600 MEGAS x <span class="vf-text-cyan">$12.990</span> <small class="fs-6 vf-text-muted">/mes</small></h3>
                     <span class="text-success fw-bold fs-6 mt-1 d-block"><i class="fa-solid fa-circle-check me-1"></i> Instalación GRATIS</span>
                 </div>
 
@@ -143,18 +144,18 @@
 
             <div class="col-lg-5 text-center">
                 <div class="vf-card vf-card-glow p-5">
-                    <i class="fa-solid fa-shield-halved vf-text-accent display-1 mb-4"></i>
+                    <i class="fa-solid fa-tv vf-text-cyan display-1 mb-4"></i>
                     <h3 class="fw-bold vf-text-title fs-2 mb-3">¿Por qué Velofibra?</h3>
-                    <p class="vf-text-muted fs-6 mb-0">Sin letras chicas ni aumentos sorpresa a los 6 meses. Disfruta la red simétrica más estable para gaming, teletrabajo y streaming 4K sin interrupciones.</p>
+                    <p class="vf-text-muted fs-6 mb-0">Sin letras chicas ni aumentos sorpresa a los 6 meses. Disfruta la red simétrica más estable para gaming, teletrabajo y streaming 4K con TV Cable digital sin interrupciones.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- SECCIÓN DE PLANES -->
-    <section id="planes-internet" class="container py-5 border-top border-dark-subtle">
+    <section id="planes-internet" class="container py-5 border-top border-secondary">
         <div class="text-center mb-5">
-            <h2 class="display-4 fw-bold vf-text-title">Planes Solo <span class="vf-text-accent">Fibra Óptica</span></h2>
+            <h2 class="display-4 fw-bold vf-text-title">Planes Solo <span class="vf-text-cyan">Fibra Óptica + TV</span></h2>
             <p class="vf-text-muted fs-5">Navegación ultra rápida y 100% simétrica para tu casa</p>
         </div>
 
@@ -163,11 +164,11 @@
             <!-- Plan 600 Megas -->
             <div class="col-lg-4 col-md-6">
                 <div class="vf-card vf-card-glow h-100 d-flex flex-column text-start">
-                    <span class="vf-badge vf-badge-brown mb-3 w-fit">MÁS POPULAR</span>
+                    <span class="vf-badge vf-badge-cyan mb-3 w-fit">MÁS POPULAR</span>
                     <h3 class="fw-bold vf-text-title h3 mb-1">600 MEGAS</h3>
                     <p class="vf-text-muted fs-6 mb-3">Ideal para teletrabajo y streaming HD</p>
-                    <div class="my-3 pb-3 border-bottom border-dark-subtle">
-                        <span class="display-5 fw-bold vf-text-accent">$12.990</span>
+                    <div class="my-3 pb-3 border-bottom border-secondary">
+                        <span class="display-5 fw-bold vf-text-cyan">$12.990</span>
                         <span class="vf-text-muted fs-6">/ mes</span>
                     </div>
                     <ul class="list-unstyled my-3 vf-text-title fs-6">
@@ -188,8 +189,8 @@
                     <span class="vf-badge bg-secondary text-white mb-3 w-fit">GAMER & PRO</span>
                     <h3 class="fw-bold vf-text-title h3 mb-1">800 MEGAS</h3>
                     <p class="vf-text-muted fs-6 mb-3">Para gamers y múltiples dispositivos</p>
-                    <div class="my-3 pb-3 border-bottom border-dark-subtle">
-                        <span class="display-5 fw-bold vf-text-accent">$17.990</span>
+                    <div class="my-3 pb-3 border-bottom border-secondary">
+                        <span class="display-5 fw-bold vf-text-cyan">$17.990</span>
                         <span class="vf-text-muted fs-6">/ mes</span>
                     </div>
                     <ul class="list-unstyled my-3 vf-text-title fs-6">
@@ -207,11 +208,11 @@
             <!-- Plan 1 Giga -->
             <div class="col-lg-4 col-md-6">
                 <div class="vf-card h-100 d-flex flex-column text-start">
-                    <span class="vf-badge bg-dark text-white mb-3 w-fit">MÁXIMA POTENCIA</span>
+                    <span class="vf-badge bg-primary text-white mb-3 w-fit">MÁXIMA POTENCIA</span>
                     <h3 class="fw-bold vf-text-title h3 mb-1">1 GIGA (1000 MB)</h3>
                     <p class="vf-text-muted fs-6 mb-3">Máxima potencia para hogares inteligentes</p>
-                    <div class="my-3 pb-3 border-bottom border-dark-subtle">
-                        <span class="display-5 fw-bold vf-text-accent">$22.990</span>
+                    <div class="my-3 pb-3 border-bottom border-secondary">
+                        <span class="display-5 fw-bold vf-text-cyan">$22.990</span>
                         <span class="vf-text-muted fs-6">/ mes</span>
                     </div>
                     <ul class="list-unstyled my-3 vf-text-title fs-6">
