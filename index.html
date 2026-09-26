@@ -12,53 +12,46 @@
     box-sizing: border-box !important;
 }
 
-/* PALETA CELESTE VIBRANTE / TECH */
+/* PALETA FONDO BLANCO / CORPORATIVO CLEAN */
 .vf-wrapper {
-    background-color: #8FE3FF !important; /* Fondo Celeste Vibrante */
-    color: #0B1B3D !important;
+    background-color: #FFFFFF !important; /* Fondo Blanco */
+    color: #0F172A !important;
     width: 100% !important;
     min-height: 100vh;
 }
 
 .vf-card {
-    background-color: #0B1B3D !important; /* Tarjetas Azul Oscuro contraste */
-    border: 1px solid #183059 !important;
+    background-color: #F8FAFC !important; /* Gris ultra claro para destacar sobre fondo blanco */
+    border: 1px solid #E2E8F0 !important;
     border-radius: 16px !important;
     padding: 24px !important;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
-    color: #FFFFFF !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+    color: #0F172A !important;
 }
 
 .vf-card:hover {
     transform: translateY(-6px);
-    border-color: #00C4FF !important;
-    box-shadow: 0 10px 30px rgba(11, 27, 61, 0.3) !important;
+    border-color: #0284C7 !important;
+    box-shadow: 0 12px 25px rgba(2, 132, 199, 0.15) !important;
 }
 
 .vf-card-glow {
-    border: 2px solid #00C4FF !important;
-    box-shadow: 0 0 20px rgba(0, 196, 255, 0.3) !important;
+    border: 2px solid #0284C7 !important;
+    background-color: #F0F9FF !important; /* Suave azul de fondo para la tarjeta destacada */
+    box-shadow: 0 8px 20px rgba(2, 132, 199, 0.12) !important;
 }
 
 .vf-text-title {
-    color: #0B1B3D !important;
-}
-
-.vf-card .vf-text-title {
-    color: #FFFFFF !important;
+    color: #0F172A !important;
 }
 
 .vf-text-cyan {
-    color: #00C4FF !important; /* Celeste Cian */
+    color: #0284C7 !important; /* Azul Cian intenso para destacar texto sobre blanco */
 }
 
 .vf-text-muted {
-    color: #183059 !important;
-}
-
-.vf-card .vf-text-muted {
-    color: #A3CEF1 !important;
+    color: #64748B !important;
 }
 
 /* Botón WhatsApp */
@@ -79,8 +72,8 @@
 }
 
 .vf-btn-outline {
-    border: 2px solid #0B1B3D !important;
-    color: #0B1B3D !important;
+    border: 2px solid #0284C7 !important;
+    color: #0284C7 !important;
     font-weight: 600 !important;
     border-radius: 50px !important;
     padding: 12px 28px !important;
@@ -89,18 +82,8 @@
 }
 
 .vf-btn-outline:hover {
-    background-color: #0B1B3D !important;
+    background-color: #0284C7 !important;
     color: #FFFFFF !important;
-}
-
-.vf-card .vf-btn-outline {
-    border-color: #00C4FF !important;
-    color: #00C4FF !important;
-}
-
-.vf-card .vf-btn-outline:hover {
-    background-color: #00C4FF !important;
-    color: #0B1B3D !important;
 }
 
 /* Insignias / Badges */
@@ -112,7 +95,7 @@
     font-weight: 700;
 }
 .vf-badge-green { background-color: #25D366; color: #FFFFFF; }
-.vf-badge-cyan { background-color: #00C4FF; color: #0B1B3D; }
+.vf-badge-cyan { background-color: #0284C7; color: #FFFFFF; }
 </style>
 
 <div class="vf-wrapper py-4">
@@ -127,10 +110,10 @@
                 </span>
 
                 <h1 class="display-3 fw-bold vf-text-title mb-3" style="letter-spacing: -1px;">
-                    La fibra óptica ultra rápida que <span class="text-primary">acelera tu hogar.</span>
+                    La fibra óptica ultra rápida que <span class="vf-text-cyan">acelera tu hogar.</span>
                 </h1>
 
-                <p class="fs-5 vf-text-muted mb-4 fw-medium">
+                <p class="fs-5 vf-text-muted mb-4 fw-normal">
                     Conéctate a la red de fibra más estable de Chile. Con WiFi ilimitado, simetría total y la mejor experiencia de televisión en alta definición.
                 </p>
 
@@ -171,10 +154,10 @@
     </section>
 
     <!-- SECCIÓN DE PLANES -->
-    <section id="planes-internet" class="container py-5 border-top border-dark border-opacity-25">
+    <section id="planes-internet" class="container py-5 border-top border-slate-200">
         <div class="text-center mb-5">
-            <h2 class="display-4 fw-bold vf-text-title">Planes Solo <span class="text-primary">Fibra Óptica + TV</span></h2>
-            <p class="vf-text-muted fs-5 fw-medium">Navegación ultra rápida y 100% simétrica para tu casa</p>
+            <h2 class="display-4 fw-bold vf-text-title">Planes Solo <span class="vf-text-cyan">Fibra Óptica + TV</span></h2>
+            <p class="vf-text-muted fs-5 fw-normal">Navegación ultra rápida y 100% simétrica para tu casa</p>
         </div>
 
         <div class="row g-4 justify-content-center">
@@ -185,7 +168,7 @@
                     <span class="vf-badge vf-badge-cyan mb-3 w-fit">MÁS POPULAR</span>
                     <h3 class="fw-bold vf-text-title h3 mb-1">600 MEGAS</h3>
                     <p class="vf-text-muted fs-6 mb-3">Ideal para teletrabajo y streaming HD</p>
-                    <div class="my-3 pb-3 border-bottom border-secondary">
+                    <div class="my-3 pb-3 border-bottom">
                         <span class="display-5 fw-bold vf-text-cyan">$12.990</span>
                         <span class="vf-text-muted fs-6">/ mes</span>
                     </div>
@@ -207,7 +190,7 @@
                     <span class="vf-badge bg-secondary text-white mb-3 w-fit">GAMER & PRO</span>
                     <h3 class="fw-bold vf-text-title h3 mb-1">800 MEGAS</h3>
                     <p class="vf-text-muted fs-6 mb-3">Para gamers y múltiples dispositivos</p>
-                    <div class="my-3 pb-3 border-bottom border-secondary">
+                    <div class="my-3 pb-3 border-bottom">
                         <span class="display-5 fw-bold vf-text-cyan">$17.990</span>
                         <span class="vf-text-muted fs-6">/ mes</span>
                     </div>
@@ -229,7 +212,7 @@
                     <span class="vf-badge bg-primary text-white mb-3 w-fit">MÁXIMA POTENCIA</span>
                     <h3 class="fw-bold vf-text-title h3 mb-1">1 GIGA (1000 MB)</h3>
                     <p class="vf-text-muted fs-6 mb-3">Máxima potencia para hogares inteligentes</p>
-                    <div class="my-3 pb-3 border-bottom border-secondary">
+                    <div class="my-3 pb-3 border-bottom">
                         <span class="display-5 fw-bold vf-text-cyan">$22.990</span>
                         <span class="vf-text-muted fs-6">/ mes</span>
                     </div>
