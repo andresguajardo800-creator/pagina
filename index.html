@@ -1,247 +1,183 @@
-<!-- RECURSOS EXTERNOS: BOOTSTRAP, FONT-AWESOME Y TIPOGRAFÍA INTER -->
+<!-- INCLUSIÓN AUTOMÁTICA DE BOOTSTRAP Y FONT-AWESOME -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-/* Reset de fuente y base */
-.fi-page, .fi-page * {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+/* Reset de tipografía */
+.vf-wrapper, .vf-wrapper * {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
     box-sizing: border-box !important;
 }
 
-.fi-page {
-    background-color: #F8FAFC !important;
-    color: #0F172A !important;
+/* PALETA CELESTE VIBRANTE / FIBRA INTRANET */
+.vf-wrapper {
+    background-color: #8FE3FF !important; /* Celeste vibrante de fondo */
+    color: #0B1B3D !important;
     width: 100% !important;
     min-height: 100vh;
 }
 
 /* NAVBAR */
 .fi-navbar {
-    background-color: #FFFFFF !important;
-    border-bottom: 1px solid #E2E8F0 !important;
-    padding: 18px 0;
+    background-color: #0B1B3D !important;
+    border-bottom: 2px solid #00C4FF !important;
+    box-shadow: 0 4px 20px rgba(11, 27, 61, 0.25);
 }
 
-.fi-brand-link {
-    text-decoration: none;
-    display: flex;
+.fi-logo-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: radial-gradient(circle at center, #183059 0%, #0B1B3D 100%);
+    border: 1px solid #00C4FF;
+    display: inline-flex;
     align-items: center;
-    gap: 12px;
+    justify-content: center;
 }
 
-.fi-logo-img {
-    width: 42px;
-    height: 42px;
-}
-
-.fi-nav-link {
-    color: #1E293B !important;
-    font-weight: 500;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.2s ease;
-}
-
-.fi-nav-link:hover {
-    color: #1D4ED8 !important;
-}
-
-.fi-btn-nav {
-    background-color: #2563EB !important;
+.fi-brand-title {
     color: #FFFFFF !important;
-    font-weight: 600 !important;
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.fi-brand-highlight {
+    color: #00C4FF !important;
+}
+
+/* TARJETAS CONTRASTANTES */
+.vf-card {
+    background-color: #0B1B3D !important; /* Azul Marino Oscuro */
+    border: 1px solid #183059 !important;
     border-radius: 20px !important;
-    padding: 10px 24px !important;
-    text-decoration: none !important;
-    transition: all 0.2s ease;
-}
-
-.fi-btn-nav:hover {
-    background-color: #1D4ED8 !important;
-    transform: translateY(-1px);
-}
-
-/* HERO SECTION */
-.fi-hero {
-    background: linear-gradient(180deg, #FFFFFF 0%, #F1F5F9 100%);
-    padding: 60px 0 80px 0;
+    padding: 24px !important;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 8px 24px rgba(11, 27, 61, 0.15) !important;
+    color: #FFFFFF !important;
     position: relative;
-    overflow: hidden;
 }
 
-.fi-hero-title {
-    font-weight: 800;
-    font-size: 2.8rem;
-    line-height: 1.15;
-    letter-spacing: -1px;
-    color: #0F172A;
+.vf-card:hover {
+    transform: translateY(-8px);
+    border-color: #00C4FF !important;
+    box-shadow: 0 16px 36px rgba(11, 27, 61, 0.25) !important;
 }
 
-.fi-hero-img-container {
-    position: relative;
-    border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+.vf-card-glow {
+    border: 2px solid #00C4FF !important;
+    box-shadow: 0 0 25px rgba(0, 196, 255, 0.35) !important;
 }
 
-.fi-hero-img-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
+/* TEXTOS Y TIPOGRAFÍAS */
+.vf-text-title {
+    color: #0B1B3D !important;
 }
 
-/* CARDS DE PLANES */
-.fi-plans-section {
-    padding: 40px 0 80px 0;
+.vf-card .vf-text-title {
+    color: #FFFFFF !important;
 }
 
-.fi-section-title {
-    font-weight: 800;
-    font-size: 2rem;
-    color: #0F172A;
-    margin-bottom: 30px;
+.vf-text-cyan {
+    color: #00C4FF !important;
 }
 
-.fi-plan-card {
-    background-color: #FFFFFF !important;
-    border: 1px solid #E2E8F0 !important;
-    border-radius: 24px !important;
-    padding: 28px 24px 24px 24px !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
-    transition: all 0.3s ease;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.vf-text-pink {
+    color: #FF2E93 !important;
 }
 
-.fi-plan-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 40px rgba(37, 99, 235, 0.12) !important;
-    border-color: #93C5FD !important;
+.vf-text-muted {
+    color: #2C4A70 !important;
 }
 
-.fi-plan-badge {
-    border-radius: 50px;
-    padding: 6px 16px;
-    font-size: 11px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    display: inline-block;
-    text-align: center;
-    margin-bottom: 16px;
+.vf-card .vf-text-muted {
+    color: #A3CEF1 !important;
 }
 
-.fi-badge-cyan {
-    background-color: #00C4FF;
-    color: #000000;
-}
-
-.fi-badge-gray {
-    background-color: #64748B;
-    color: #FFFFFF;
-}
-
-.fi-badge-blue {
-    background-color: #2563EB;
-    color: #FFFFFF;
-}
-
-.fi-plan-speed {
-    font-weight: 800;
-    font-size: 1.8rem;
-    color: #0F172A;
-    margin-bottom: 4px;
-}
-
-.fi-plan-desc {
-    color: #64748B;
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-    min-height: 38px;
-}
-
-.fi-plan-features {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 24px 0;
-}
-
-.fi-plan-features li {
-    font-size: 0.92rem;
-    color: #334155;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.fi-plan-features i {
-    color: #64748B;
-    font-size: 14px;
-}
-
-.fi-plan-price-container {
-    text-align: center;
-    margin-bottom: 16px;
-}
-
-.fi-plan-price {
-    font-weight: 800;
-    font-size: 2.3rem;
-    color: #0F172A;
-}
-
-.fi-plan-period {
-    font-size: 1rem;
-    color: #64748B;
-    font-weight: 500;
-}
-
-.fi-btn-plan {
-    background-color: #2563EB !important;
+/* BOTONES */
+.vf-btn-whatsapp {
+    background-color: #25D366 !important;
     color: #FFFFFF !important;
     font-weight: 700 !important;
     border-radius: 50px !important;
-    padding: 12px 20px !important;
+    padding: 12px 28px !important;
     text-decoration: none !important;
-    display: block;
-    text-align: center;
-    transition: all 0.2s ease;
-}
-
-.fi-btn-plan:hover {
-    background-color: #1D4ED8 !important;
-    color: #FFFFFF !important;
-    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
-}
-
-/* BADGE Y WHATSAPP FLOTANTE */
-.fi-phone-pill {
-    position: fixed;
-    bottom: 90px;
-    right: 24px;
-    z-index: 9999;
-    background-color: #FFFFFF;
-    border: 1px solid #E2E8F0;
-    padding: 8px 16px;
-    border-radius: 50px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    font-weight: 700;
-    color: #0F172A;
-    font-size: 14px;
-    display: flex;
+    display: inline-flex !important;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    transition: all 0.25s ease;
 }
 
-.fi-wa-container {
+.vf-btn-whatsapp:hover {
+    background-color: #1ebc57 !important;
+    color: #FFFFFF !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.vf-btn-outline {
+    border: 2px solid #0B1B3D !important;
+    color: #0B1B3D !important;
+    font-weight: 700 !important;
+    border-radius: 50px !important;
+    padding: 12px 28px !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+
+.vf-btn-outline:hover {
+    background-color: #0B1B3D !important;
+    color: #FFFFFF !important;
+    transform: translateY(-2px);
+}
+
+.vf-card .vf-btn-outline {
+    border-color: #00C4FF !important;
+    color: #00C4FF !important;
+}
+
+.vf-card .vf-btn-outline:hover {
+    background-color: #00C4FF !important;
+    color: #0B1B3D !important;
+}
+
+/* BADGES / INSIGNIAS */
+.vf-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.vf-badge-green { background-color: #25D366; color: #FFFFFF; }
+.vf-badge-cyan { background-color: #00C4FF; color: #0B1B3D; }
+.vf-badge-pink { background-color: #FF2E93; color: #FFFFFF; }
+
+/* PLATAFORMAS EN CARTAS */
+.streaming-tag {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #00C4FF;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* BOTÓN FLOTANTE WHATSAPP ANIMADO */
+.vf-float-container {
     position: fixed;
     bottom: 24px;
     right: 24px;
@@ -251,189 +187,268 @@
     gap: 12px;
 }
 
-.fi-wa-tooltip {
-    background-color: #22C55E;
+.vf-float-tooltip {
+    background-color: #0B1B3D;
     color: #FFFFFF;
     font-weight: 600;
     font-size: 14px;
-    padding: 8px 18px;
+    padding: 8px 16px;
     border-radius: 30px;
-    box-shadow: 0 4px 16px rgba(34, 197, 94, 0.25);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid #00C4FF;
 }
 
-.fi-wa-btn {
-    width: 58px;
-    height: 58px;
-    background-color: #22C55E;
+.vf-btn-float-wa {
+    width: 64px;
+    height: 64px;
+    background-color: #25D366;
     color: #FFFFFF !important;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
+    font-size: 32px;
     text-decoration: none;
-    box-shadow: 0 4px 20px rgba(34, 197, 94, 0.4);
-    transition: transform 0.2s ease;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+    position: relative;
+    transition: transform 0.3s ease;
 }
 
-.fi-wa-btn:hover {
-    transform: scale(1.08);
+.vf-btn-float-wa:hover {
+    transform: scale(1.1);
     color: #FFFFFF !important;
+}
+
+.vf-btn-float-wa::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #25D366;
+    opacity: 0.7;
+    z-index: -1;
+    animation: pulseRing 2s infinite;
+}
+
+@keyframes pulseRing {
+    0% { transform: scale(0.95); opacity: 0.8; }
+    50% { transform: scale(1.35); opacity: 0; }
+    100% { transform: scale(0.95); opacity: 0; }
+}
+
+/* BANNER HIGHLIGHT */
+.promo-banner {
+    background: linear-gradient(135deg, #0B1B3D 0%, #162B54 100%);
+    border: 2px solid #00C4FF;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 </style>
 
-<div class="fi-page">
+<div class="vf-wrapper">
 
-    <!-- NAVBAR -->
-    <nav class="fi-navbar">
+    <!-- NAVBAR NAVEGACIÓN PRINCIPAL -->
+    <nav class="navbar fi-navbar py-3">
         <div class="container d-flex align-items-center justify-content-between">
-            <a href="#" class="fi-brand-link">
-                <!-- LOGO DE RAYO FIBRA -->
-                <svg class="fi-logo-img" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 35 C 30 25, 45 40, 50 48 L 50 35 L 75 20 L 50 50 L 78 50 L 44 85 L 52 56 L 20 35 Z" fill="#00C4FF"/>
-                    <path d="M20 48 C 30 38, 42 50, 48 56" stroke="#00C4FF" stroke-width="5" stroke-linecap="round"/>
-                    <path d="M20 60 C 28 52, 38 60, 44 64" stroke="#00C4FF" stroke-width="5" stroke-linecap="round"/>
-                </svg>
+            <a class="navbar-brand d-flex align-items-center gap-3 m-0" href="#">
+                <div class="fi-logo-icon">
+                    <!-- SVG DEL LOGO DE RAYO CON FIBRAS -->
+                    <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 35 C 30 25, 45 40, 50 48 L 50 35 L 75 20 L 50 50 L 78 50 L 44 85 L 52 56 L 20 35 Z" fill="#00C4FF" stroke="#FFFFFF" stroke-width="2"/>
+                        <path d="M20 48 C 30 38, 42 50, 48 56" stroke="#00C4FF" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M20 60 C 28 52, 38 60, 44 64" stroke="#00C4FF" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <span class="fi-brand-title">Fibra <span class="fi-brand-highlight">INTRANET</span></span>
             </a>
-
-            <div class="d-none d-md-flex align-items-center gap-4">
-                <a href="#planes" class="fi-nav-link">Planes</a>
-                <a href="https://wa.me/56965840930?text=Hola,%20quiero%20consultar%20cobertura" target="_blank" class="fi-nav-link">Cobertura</a>
-                <a href="https://wa.me/56965840930?text=Hola,%20necesito%20soporte%20tecnico" target="_blank" class="fi-nav-link">Soporte</a>
-                <a href="https://wa.me/56965840930?text=Hola,%20quiero%20contratar%20el%20servicio%20de%20Fibra%20INTRANET" target="_blank" class="fi-btn-nav">Contratar</a>
-            </div>
+            <a href="https://wa.me/56965840930?text=Hola,%20quiero%20consultar%20cobertura%20con%20Fibra%20INTRANET" target="_blank" rel="noopener noreferrer" class="vf-btn-whatsapp py-2 px-3 fs-6">
+                <i class="fa-brands fa-whatsapp me-2" aria-hidden="true"></i> Contactar
+            </a>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <section class="fi-hero">
-        <div class="container">
-            <div class="row align-items-center g-5">
+    <header class="container py-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7 text-start">
                 
-                <div class="col-lg-6 text-start">
-                    <h1 class="fi-hero-title mb-4">
-                        FIBRA ÓPTICA INTRANET:<br>
-                        TU HOGAR CONECTADO<br>
-                        A MÁXIMA VELOCIDAD
-                    </h1>
+                <span class="vf-badge vf-badge-green mb-3">
+                    <i class="fa-solid fa-bolt me-1" aria-hidden="true"></i> Cobertura en todo Chile • Instalación Gratis
+                </span>
+
+                <h1 class="display-3 fw-extrabold vf-text-title mb-3" style="letter-spacing: -1px; font-weight: 800;">
+                    La fibra óptica ultra rápida que <span class="vf-text-cyan" style="color: #0088CC !important;">acelera tu hogar.</span>
+                </h1>
+
+                <p class="fs-5 vf-text-muted mb-4 fw-medium">
+                    Conéctate a la red de <strong>Fibra INTRANET</strong> más estable de Chile. Disfruta de WiFi ilimitado, simetría total y las mejores promociones con canales HD y plataformas incluidas.
+                </p>
+
+                <!-- Beneficios principales -->
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                    <span class="vf-card py-2 px-3 fs-6 fw-semibold"><i class="fa-solid fa-check text-success me-2" aria-hidden="true"></i>Sin contrato de amarra</span>
+                    <span class="vf-card py-2 px-3 fs-6 fw-semibold"><i class="fa-solid fa-check text-success me-2" aria-hidden="true"></i>Tarifa fija y transparente</span>
+                    <span class="vf-card py-2 px-3 fs-6 fw-semibold"><i class="fa-solid fa-check text-success me-2" aria-hidden="true"></i>Soporte 24/7 en WhatsApp</span>
                 </div>
 
-                <div class="col-lg-6">
-                    <div class="fi-hero-img-container">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80" alt="Familia conectada con Fibra Óptica Intranet">
-                    </div>
+                <!-- Tarjeta Promo Destacada -->
+                <div class="vf-card vf-card-glow mb-4" style="max-width: 480px;">
+                    <span class="vf-badge vf-badge-cyan mb-2">⚡ PROMO DESTACADA</span>
+                    <h2 class="h3 fw-bold vf-text-title mb-1">DUO 600 MB x <span class="vf-text-cyan">$27.990</span> <small class="fs-6 vf-text-muted">/mes</small></h2>
+                    <p class="fs-6 text-white-50 mb-2">24% DCTO por 6 meses • Incluye HBO Max y 1 Deco Gratis</p>
+                    <span class="text-success fw-bold fs-6 d-block"><i class="fa-solid fa-circle-check me-1" aria-hidden="true"></i> Instalación GRATIS</span>
+                </div>
+
+                <!-- Botones CTA -->
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="https://wa.me/56965840930?text=Hola,%20quiero%20consultar%20cobertura%20con%20Fibra%20INTRANET" target="_blank" rel="noopener noreferrer" class="vf-btn-whatsapp fs-5" aria-label="Consultar cobertura por WhatsApp">
+                        <i class="fa-brands fa-whatsapp me-2" aria-hidden="true"></i> Consultar Cobertura
+                    </a>
+                    <a href="#promos-fibra" class="vf-btn-outline fs-5" aria-label="Ver Planes de Internet y TV">
+                        Ver Promociones
+                    </a>
                 </div>
 
             </div>
-        </div>
-    </section>
 
-    <!-- PLANES -->
-    <section id="planes" class="fi-plans-section">
-        <div class="container">
+            <div class="col-lg-5 text-center">
+                <div class="vf-card vf-card-glow p-5">
+                    <div class="mb-4">
+                        <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 35 C 30 25, 45 40, 50 48 L 50 35 L 75 20 L 50 50 L 78 50 L 44 85 L 52 56 L 20 35 Z" fill="#00C4FF" stroke="#FFFFFF" stroke-width="2"/>
+                            <path d="M20 48 C 30 38, 42 50, 48 56" stroke="#00C4FF" stroke-width="4" stroke-linecap="round"/>
+                            <path d="M20 60 C 28 52, 38 60, 44 64" stroke="#00C4FF" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="fw-bold vf-text-title fs-2 mb-3">Fibra INTRANET</h3>
+                    <p class="vf-text-muted fs-6 mb-0">Disfruta la mejor red de Fibra Óptica con TV Ultra HD, plataformas de streaming como HBO Max, Disney+, UFC y Paramount+ incluidas en tus planes Dúo.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCIÓN PROMOCIONES FIBRA INTRANET -->
+    <main id="promos-fibra" class="container py-5 border-top border-dark border-opacity-25">
+        <div class="text-center mb-5">
+            <span class="vf-badge vf-badge-pink mb-2">🔥 OFERTAS IMPERDIBLES</span>
+            <h2 class="display-4 fw-extrabold vf-text-title" style="font-weight: 800;">Promociones <span style="color: #0088CC !important;">Fibra INTRANET</span></h2>
+            <p class="vf-text-muted fs-5 fw-medium">Internet Fibra Óptica + TV Ultra HD con decodificador gratis e instalación sin costo</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
             
-            <h2 class="fi-section-title text-start">Nuestros Planes</h2>
-
-            <div class="row g-4 justify-content-center">
-
-                <!-- PLAN 1: 600 MEGAS -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="fi-plan-card">
-                        <div>
-                            <div>
-                                <span class="fi-plan-badge fi-badge-cyan">MÁS POPULAR</span>
-                            </div>
-                            <h3 class="fi-plan-speed">600 MEGAS</h3>
-                            <p class="fi-plan-desc">Ideal para teletrabajo y streaming HD</p>
-
-                            <ul class="fi-plan-features">
-                                <li><i class="fa-solid fa-gauge-high"></i> 600 Mbps Simétricos</li>
-                                <li><i class="fa-solid fa-wifi"></i> Router WiFi Ilimitado</li>
-                                <li><i class="fa-regular fa-circle-check"></i> Instalación GRATIS</li>
-                                <li><i class="fa-regular fa-circle-check"></i> Sin contrato de amarra</li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <div class="fi-plan-price-container">
-                                <span class="fi-plan-price">$12.990</span><span class="fi-plan-period">/mes</span>
-                            </div>
-                            <a href="https://wa.me/56965840930?text=Hola,%20quiero%20el%20plan%20600%20MEGAS%20de%20$12.990" target="_blank" class="fi-btn-plan">Lo Quiero!</a>
-                        </div>
+            <!-- PLAN DUO 600 MB -->
+            <article class="col-lg-4 col-md-6">
+                <div class="vf-card h-100 d-flex flex-column text-start">
+                    <span class="vf-badge vf-badge-cyan mb-3 align-self-start">24% DCTO X 6 MESES</span>
+                    <h3 class="fw-bold vf-text-title h2 mb-0">DUO 600 MB</h3>
+                    <p class="vf-text-muted fs-6 mb-2">Antes: <del>$36.990</del></p>
+                    
+                    <div class="my-2 pb-3 border-bottom border-secondary">
+                        <span class="display-5 fw-bold vf-text-cyan">$27.990</span>
+                        <span class="vf-text-muted fs-6">/ mes</span>
                     </div>
-                </div>
 
-                <!-- PLAN 2: 800 MEGAS -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="fi-plan-card">
-                        <div>
-                            <div>
-                                <span class="fi-plan-badge fi-badge-gray">GAMER & PRO</span>
-                            </div>
-                            <h3 class="fi-plan-speed">800 MEGAS</h3>
-                            <p class="fi-plan-desc">Para gamers y múltiples dispositivos</p>
+                    <ul class="list-unstyled my-3 vf-text-title fs-6 flex-grow-1">
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2" aria-hidden="true"></i> <strong>600 Mbps</strong> Fibra Óptica</li>
+                        <li class="mb-2"><i class="fa-solid fa-tv text-info me-2" aria-hidden="true"></i> TV HD Incluido</li>
+                        <li class="mb-2"><i class="fa-solid fa-box text-warning me-2" aria-hidden="true"></i> <strong>1 Deco GRATIS</strong></li>
+                        <li class="mb-2"><i class="fa-solid fa-bolt text-danger me-2" aria-hidden="true"></i> <strong>Instalación GRATIS</strong></li>
+                    </ul>
 
-                            <ul class="fi-plan-features">
-                                <li><i class="fa-solid fa-gauge-high"></i> 800 Mbps Simétricos</li>
-                                <li><i class="fa-solid fa-laptop-code"></i> Latencia Ultra Baja</li>
-                                <li><i class="fa-regular fa-circle-check"></i> Instalación GRATIS</li>
-                                <li><i class="fa-regular fa-circle-check"></i> Soporte Prioritario 24/7</li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <div class="fi-plan-price-container">
-                                <span class="fi-plan-price">$17.990</span><span class="fi-plan-period">/mes</span>
-                            </div>
-                            <a href="https://wa.me/56965840930?text=Hola,%20quiero%20el%20plan%20800%20MEGAS%20de%20$17.990" target="_blank" class="fi-btn-plan">Lo Quiero!</a>
-                        </div>
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <span class="streaming-tag"><i class="fa-solid fa-film" aria-hidden="true"></i> HBO Max</span>
                     </div>
+
+                    <a href="https://wa.me/56965840930?text=Hola,%20quiero%20solicitar%20el%20plan%20DUO%20600%20MB%20por%20$27.990%20con%20Fibra%20INTRANET" target="_blank" rel="noopener noreferrer" class="vf-btn-whatsapp text-center w-100 fs-6" aria-label="Contratar plan DUO 600 MB">
+                        <i class="fa-brands fa-whatsapp me-2" aria-hidden="true"></i> Contratar Plan
+                    </a>
                 </div>
+            </article>
 
-                <!-- PLAN 3: 1 GIGA -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="fi-plan-card">
-                        <div>
-                            <div>
-                                <span class="fi-plan-badge fi-badge-blue">MÁXIMA POTENCIA</span>
-                            </div>
-                            <h3 class="fi-plan-speed">1 GIGA (1000 MB)</h3>
-                            <p class="fi-plan-desc">Máxima potencia para hogares inteligentes</p>
-
-                            <ul class="fi-plan-features">
-                                <li><i class="fa-solid fa-gauge-high"></i> 1000 Mbps Simétricos</li>
-                                <li><i class="fa-solid fa-house-signal"></i> Casas Inteligentes</li>
-                                <li><i class="fa-regular fa-circle-check"></i> Instalación GRATIS</li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <div class="fi-plan-price-container">
-                                <span class="fi-plan-price">$22.990</span><span class="fi-plan-period">/mes</span>
-                            </div>
-                            <a href="https://wa.me/56965840930?text=Hola,%20quiero%20el%20plan%201%20GIGA%20de%20$22.990" target="_blank" class="fi-btn-plan">Lo Quiero!</a>
-                        </div>
+            <!-- PLAN DUO 940 MB -->
+            <article class="col-lg-4 col-md-6">
+                <div class="vf-card vf-card-glow h-100 d-flex flex-column text-start">
+                    <span class="vf-badge vf-badge-pink mb-3 align-self-start">37% DCTO X 12 MESES</span>
+                    <h3 class="fw-bold vf-text-title h2 mb-0">DUO 940 MB</h3>
+                    <p class="vf-text-muted fs-6 mb-2">Antes: <del>$52.990</del></p>
+                    
+                    <div class="my-2 pb-3 border-bottom border-secondary">
+                        <span class="display-5 fw-bold vf-text-cyan">$32.990</span>
+                        <span class="vf-text-muted fs-6">/ mes</span>
                     </div>
-                </div>
 
-            </div>
+                    <ul class="list-unstyled my-3 vf-text-title fs-6 flex-grow-1">
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2" aria-hidden="true"></i> <strong>940 Mbps</strong> Ultra Velocidad</li>
+                        <li class="mb-2"><i class="fa-solid fa-tv text-info me-2" aria-hidden="true"></i> TV HD Incluido</li>
+                        <li class="mb-2"><i class="fa-solid fa-box text-warning me-2" aria-hidden="true"></i> <strong>1 Deco GRATIS</strong></li>
+                        <li class="mb-2"><i class="fa-solid fa-bolt text-danger me-2" aria-hidden="true"></i> <strong>Instalación GRATIS</strong></li>
+                    </ul>
+
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <span class="streaming-tag"><i class="fa-solid fa-play" aria-hidden="true"></i> Disney+</span>
+                        <span class="streaming-tag"><i class="fa-solid fa-film" aria-hidden="true"></i> HBO Max</span>
+                    </div>
+
+                    <a href="https://wa.me/56965840930?text=Hola,%20quiero%20solicitar%20el%20plan%20DUO%20940%20MB%20por%20$32.990%20con%20Fibra%20INTRANET" target="_blank" rel="noopener noreferrer" class="vf-btn-whatsapp text-center w-100 fs-6" aria-label="Contratar plan DUO 940 MB">
+                        <i class="fa-brands fa-whatsapp me-2" aria-hidden="true"></i> Contratar Plan
+                    </a>
+                </div>
+            </article>
+
+            <!-- PLAN DUO 800 MB -->
+            <article class="col-lg-4 col-md-6">
+                <div class="vf-card h-100 d-flex flex-column text-start">
+                    <span class="vf-badge vf-badge-green mb-3 align-self-start">PRECIO FIJO POR SIEMPRE</span>
+                    <h3 class="fw-bold vf-text-title h2 mb-0">DUO 800 MB</h3>
+                    <p class="vf-text-muted fs-6 mb-2">Precio Fijo Garantizado</p>
+                    
+                    <div class="my-2 pb-3 border-bottom border-secondary">
+                        <span class="display-5 fw-bold vf-text-cyan">$37.990</span>
+                        <span class="vf-text-muted fs-6">/ mes</span>
+                    </div>
+
+                    <ul class="list-unstyled my-3 vf-text-title fs-6 flex-grow-1">
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2" aria-hidden="true"></i> <strong>800 Mbps</strong> Sin Variaciones</li>
+                        <li class="mb-2"><i class="fa-solid fa-tv text-info me-2" aria-hidden="true"></i> TV HD Incluido</li>
+                        <li class="mb-2"><i class="fa-solid fa-box text-warning me-2" aria-hidden="true"></i> <strong>1 Deco GRATIS</strong></li>
+                        <li class="mb-2"><i class="fa-solid fa-bolt text-danger me-2" aria-hidden="true"></i> <strong>Instalación GRATIS</strong></li>
+                    </ul>
+
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <span class="streaming-tag"><i class="fa-solid fa-hand-fist" aria-hidden="true"></i> UFC</span>
+                        <span class="streaming-tag"><i class="fa-solid fa-mountain" aria-hidden="true"></i> Paramount+</span>
+                        <span class="streaming-tag"><i class="fa-solid fa-film" aria-hidden="true"></i> HBO Max</span>
+                    </div>
+
+                    <a href="https://wa.me/56965840930?text=Hola,%20quiero%20solicitar%20el%20plan%20DUO%20800%20MB%20por%20$37.990%20con%20Fibra%20INTRANET" target="_blank" rel="noopener noreferrer" class="vf-btn-whatsapp text-center w-100 fs-6" aria-label="Contratar plan DUO 800 MB">
+                        <i class="fa-brands fa-whatsapp me-2" aria-hidden="true"></i> Contratar Plan
+                    </a>
+                </div>
+            </article>
 
         </div>
-    </section>
+
+        <!-- BANNER DE INSTALACIÓN GRATIS -->
+        <div class="promo-banner mt-5 text-center text-white">
+            <h3 class="display-6 fw-bold mb-2">⚡ ¡INSTALACIÓN 100% GRATIS EN TODOS LOS PLANES!</h3>
+            <p class="fs-5 mb-3 text-white-50">Fibra INTRANET: Internet Fibra Óptica y TV Ultra HD con atención y soporte 24/7</p>
+            <a href="https://wa.me/56965840930?text=Hola,%20quiero%20aprovechar%20la%20instalacion%20gratis%20con%20Fibra%20INTRANET" target="_blank" rel="noopener noreferrer" class="vf-btn-whatsapp fs-5">
+                <i class="fa-brands fa-whatsapp me-2" aria-hidden="true"></i> Hablar con un Asesor
+            </a>
+        </div>
+    </main>
 
 </div>
 
-<!-- BADGE CON NÚMERO DE TELÉFONO -->
-<div class="fi-phone-pill d-none d-md-flex">
-    <i class="fa-solid fa-phone text-success"></i> +56 9 6584 0930
-</div>
-
-<!-- BOTÓN FLOTANTE WHATSAPP -->
-<div class="fi-wa-container">
-    <div class="fi-wa-tooltip d-none d-md-block">
-        ¿Dudas? ¡Hablemos por WhatsApp!
+<!-- BOTÓN FLOTANTE ANIMADO DE WHATSAPP CON TOOLTIP -->
+<div class="vf-float-container">
+    <div class="vf-float-tooltip d-none d-md-block">
+        ¡Consulta tu Cobertura Aquí! 💬
     </div>
-    <a href="https://wa.me/56965840930?text=Hola,%20tengo%20consultas%20sobre%20Fibra%20INTRANET" target="_blank" class="fi-wa-btn" aria-label="Contacto por WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
+    <a href="https://wa.me/56965840930?text=Hola,%20necesito%20informacion%20sobre%20las%20promociones%20de%20Fibra%20INTRANET" target="_blank" rel="noopener noreferrer" class="vf-btn-float-wa" aria-label="Contacto por WhatsApp">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
     </a>
 </div>
