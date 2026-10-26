@@ -1,454 +1,1078 @@
-<!-- INCLUSIÓN AUTOMÁTICA DE BOOTSTRAP Y FONT-AWESOME -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASTER TV FHD - Televisión FHD y Fibra Óptica Ultra Rápida</title>
+    
+    <!-- Framework & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Typography: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<style>
-/* Reset de tipografía */
-.vf-wrapper, .vf-wrapper * {
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-    box-sizing: border-box !important;
-}
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-darker: #0d1117;
+            --bg-card: #1e293b;
+            --bg-card-hover: #26354a;
+            --border-color: rgba(255, 255, 255, 0.1);
+            
+            --accent-pink: #e11d48;
+            --accent-purple: #8b5cf6;
+            --accent-cyan: #06b6d4;
+            --accent-cyan-bright: #22d3ee;
+            
+            --wa-green: #25d366;
+            --wa-green-hover: #1ebc57;
+            
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
 
-/* PALETA CELESTE VIBRANTE / FIBRA INTRANET */
-.vf-wrapper {
-    background-color: #8FE3FF !important; /* Celeste vibrante de fondo */
-    color: #0B1B3D !important;
-    width: 100% !important;
-    min-height: 100vh;
-}
+        * {
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
 
-/* NAVBAR */
-.fi-navbar {
-    background-color: #0B1B3D !important;
-    border-bottom: 2px solid #00C4FF !important;
-    box-shadow: 0 4px 20px rgba(11, 27, 61, 0.25);
-}
+        body {
+            background-color: var(--bg-darker);
+            color: var(--text-main);
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
 
-.fi-logo-icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 10px;
-    background: radial-gradient(circle at center, #183059 0%, #0B1B3D 100%);
-    border: 1px solid #00C4FF;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
+        /* TOP BAR */
+        .top-bar {
+            background-color: #080c14;
+            color: var(--text-muted);
+            font-size: 0.825rem;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
 
-.fi-brand-title {
-    color: #FFFFFF !important;
-    font-size: 1.4rem;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-}
+        .top-bar a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
 
-.fi-brand-highlight {
-    color: #00C4FF !important;
-}
+        .top-bar a:hover {
+            color: var(--accent-cyan-bright);
+        }
 
-/* TARJETAS CONTRASTANTES */
-.vf-card {
-    background-color: #0B1B3D !important; /* Azul Marino Oscuro */
-    border: 1px solid #183059 !important;
-    border-radius: 20px !important;
-    padding: 24px !important;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, border-color 0.3s ease;
-    box-shadow: 0 8px 24px rgba(11, 27, 61, 0.15) !important;
-    color: #FFFFFF !important;
-    position: relative;
-}
+        /* NAVBAR */
+        .fi-navbar {
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-.vf-card:hover {
-    transform: translateY(-8px);
-    border-color: #00C4FF !important;
-    box-shadow: 0 16px 36px rgba(11, 27, 61, 0.25) !important;
-}
+        .fi-brand-title {
+            color: #ffffff;
+            font-size: 1.35rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
 
-.vf-card-glow {
-    border: 2px solid #00C4FF !important;
-    box-shadow: 0 0 25px rgba(0, 196, 255, 0.35) !important;
-}
+        .fi-brand-highlight {
+            background: linear-gradient(135deg, var(--accent-cyan-bright) 0%, var(--accent-purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-/* TEXTOS Y TIPOGRAFÍAS */
-.vf-text-title {
-    color: #0B1B3D !important;
-}
+        .nav-link-custom {
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.925rem;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
 
-.vf-card .vf-text-title {
-    color: #FFFFFF !important;
-}
+        .nav-link-custom:hover {
+            color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
 
-.vf-text-cyan {
-    color: #00C4FF !important;
-}
+        /* HERO SECTION */
+        .hero-section {
+            background: radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.15) 0%, transparent 40%),
+                        radial-gradient(circle at 10% 80%, rgba(6, 182, 212, 0.15) 0%, transparent 40%),
+                        var(--bg-dark);
+            padding: 60px 0 80px 0;
+            position: relative;
+            border-bottom: 1px solid var(--border-color);
+        }
 
-.vf-text-pink {
-    color: #FF2E93 !important;
-}
+        .hero-badge {
+            background: rgba(6, 182, 212, 0.1);
+            color: var(--accent-cyan-bright);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.825rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-.vf-text-muted {
-    color: #2C4A70 !important;
-}
+        .hero-title {
+            font-weight: 800;
+            font-size: 2.8rem;
+            line-height: 1.15;
+            letter-spacing: -0.8px;
+        }
 
-.vf-card .vf-text-muted {
-    color: #A3CEF1 !important;
-}
+        .hero-title-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, var(--accent-cyan-bright) 50%, var(--accent-pink) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-/* BOTONES */
-.vf-btn-whatsapp {
-    background-color: #25D366 !important;
-    color: #FFFFFF !important;
-    font-weight: 700 !important;
-    border-radius: 50px !important;
-    padding: 12px 28px !important;
-    text-decoration: none !important;
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-    transition: all 0.25s ease;
-}
+        .hero-subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
 
-.vf-btn-whatsapp:hover {
-    background-color: #1ebc57 !important;
-    color: #FFFFFF !important;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-}
+        /* CARD HERO DE COBERTURA */
+        .coverage-card-hero {
+            background-color: var(--bg-card);
+            border-radius: 20px;
+            padding: 28px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+        }
 
-.vf-btn-outline {
-    border: 2px solid #0B1B3D !important;
-    color: #0B1B3D !important;
-    font-weight: 700 !important;
-    border-radius: 50px !important;
-    padding: 12px 28px !important;
-    text-decoration: none !important;
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.25s ease;
-}
+        .form-control-custom, .form-select-custom {
+            background-color: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border-color);
+            color: #ffffff;
+            padding: 12px 16px;
+            font-size: 0.925rem;
+            border-radius: 10px;
+            transition: all 0.2s;
+        }
 
-.vf-btn-outline:hover {
-    background-color: #0B1B3D !important;
-    color: #FFFFFF !important;
-    transform: translateY(-2px);
-}
+        .form-control-custom::placeholder {
+            color: #64748b;
+        }
 
-.vf-card .vf-btn-outline {
-    border-color: #00C4FF !important;
-    color: #00C4FF !important;
-}
+        .form-control-custom:focus, .form-select-custom:focus {
+            background-color: rgba(15, 23, 42, 0.9);
+            border-color: var(--accent-cyan);
+            color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
+            outline: none;
+        }
 
-.vf-card .vf-btn-outline:hover {
-    background-color: #00C4FF !important;
-    color: #0B1B3D !important;
-}
+        .form-select-custom option {
+            background-color: var(--bg-dark);
+            color: #ffffff;
+        }
 
-/* BADGES / INSIGNIAS */
-.vf-badge {
-    display: inline-block;
-    padding: 6px 14px;
-    border-radius: 50px;
-    font-size: 13px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-.vf-badge-green { background-color: #25D366; color: #FFFFFF; }
-.vf-badge-cyan { background-color: #00C4FF; color: #0B1B3D; }
-.vf-badge-pink { background-color: #FF2E93; color: #FFFFFF; }
+        /* BENEFICIOS DESTACADOS */
+        .feature-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
 
-/* PLATAFORMAS EN CARTAS */
-.streaming-tag {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 8px;
-    padding: 4px 10px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #00C4FF;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-}
+        .feature-box:hover {
+            transform: translateY(-50%);
+            border-color: var(--accent-cyan);
+            background-color: var(--bg-card-hover);
+        }
 
-/* BOTÓN FLOTANTE WHATSAPP ANIMADO */
-.vf-float-container {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    z-index: 99999;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
+        .feature-icon-wrapper {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(124, 58, 237, 0.2) 100%);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: var(--accent-cyan-bright);
+            margin-bottom: 16px;
+        }
 
-.vf-float-tooltip {
-    background-color: #0B1B3D;
-    color: #FFFFFF;
-    font-weight: 600;
-    font-size: 14px;
-    padding: 8px 16px;
-    border-radius: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border: 1px solid #00C4FF;
-}
+        /* TARJETAS DE PLANES */
+        .plan-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 32px 28px;
+            position: relative;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
 
-.vf-btn-float-wa {
-    width: 64px;
-    height: 64px;
-    background-color: #25D366;
-    color: #FFFFFF !important;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 32px;
-    text-decoration: none;
-    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
-    position: relative;
-    transition: transform 0.3s ease;
-}
+        .plan-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
 
-.vf-btn-float-wa:hover {
-    transform: scale(1.1);
-    color: #FFFFFF !important;
-}
+        .plan-card.featured {
+            border: 2px solid var(--accent-pink);
+            background: linear-gradient(180deg, #1e293b 0%, #172033 100%);
+            box-shadow: 0 0 35px rgba(225, 29, 72, 0.2);
+        }
 
-.vf-btn-float-wa::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: #25D366;
-    opacity: 0.7;
-    z-index: -1;
-    animation: pulseRing 2s infinite;
-}
+        .plan-badge-featured {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-purple) 100%);
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 6px 18px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            box-shadow: 0 4px 15px rgba(225, 29, 72, 0.4);
+        }
 
-@keyframes pulseRing {
-    0% { transform: scale(0.95); opacity: 0.8; }
-    50% { transform: scale(1.35); opacity: 0; }
-    100% { transform: scale(0.95); opacity: 0; }
-}
+        .plan-badge-discount {
+            background-color: rgba(225, 29, 72, 0.15);
+            color: #f43f5e;
+            border: 1px solid rgba(225, 29, 72, 0.3);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 6px;
+            display: inline-block;
+        }
 
-/* BANNER HIGHLIGHT */
-.promo-banner {
-    background: linear-gradient(135deg, #0B1B3D 0%, #162B54 100%);
-    border: 2px solid #00C4FF;
-    border-radius: 20px;
-    padding: 24px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-</style>
+        .plan-badge-fixed {
+            background-color: rgba(34, 197, 94, 0.15);
+            color: #4ade80;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 6px;
+            display: inline-block;
+        }
 
-<div class="vf-wrapper">
+        .plan-name {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-top: 10px;
+            margin-bottom: 4px;
+        }
 
-    <!-- NAVBAR NAVEGACIÓN PRINCIPAL -->
-    <nav class="navbar fi-navbar py-3">
-        <div class="container d-flex align-items-center justify-content-between">
+        .plan-price-box {
+            margin: 18px 0;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .plan-old-price {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            text-decoration: line-through;
+        }
+
+        .plan-price {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--accent-cyan-bright);
+            line-height: 1;
+        }
+
+        .plan-period {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .plan-features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 24px 0;
+            flex-grow: 1;
+        }
+
+        .plan-features-list li {
+            font-size: 0.925rem;
+            color: #cbd5e1;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .plan-features-list li i {
+            color: var(--accent-cyan-bright);
+            font-size: 1rem;
+        }
+
+        .streaming-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 20px;
+        }
+
+        .streaming-pill {
+            background-color: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border-color);
+            color: var(--accent-cyan-bright);
+            font-size: 0.775rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* BOTONES */
+        .btn-wa-primary {
+            background-color: var(--wa-green);
+            color: #ffffff !important;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 12px 24px;
+            border-radius: 10px;
+            border: none;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.25);
+        }
+
+        .btn-wa-primary:hover {
+            background-color: var(--wa-green-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-brand-gradient {
+            background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-purple) 100%);
+            color: #ffffff !important;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 12px 24px;
+            border-radius: 10px;
+            border: none;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-brand-gradient:hover {
+            opacity: 0.95;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(6, 182, 212, 0.3);
+        }
+
+        .banner-installation {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-radius: 20px;
+            padding: 36px 32px;
+            color: #ffffff;
+            border: 1px solid var(--accent-cyan);
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.15);
+        }
+
+        /* ACCORDION FAQ */
+        .accordion-dark .accordion-item {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px !important;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .accordion-dark .accordion-button {
+            font-weight: 700;
+            color: #ffffff;
+            background-color: var(--bg-card);
+            padding: 18px 24px;
+            font-size: 1rem;
+            box-shadow: none !important;
+        }
+
+        .accordion-dark .accordion-button:not(.collapsed) {
+            color: var(--accent-cyan-bright);
+            background-color: rgba(6, 182, 212, 0.1);
+        }
+
+        .accordion-dark .accordion-button::after {
+            filter: invert(1);
+        }
+
+        .accordion-dark .accordion-body {
+            color: var(--text-muted);
+            font-size: 0.925rem;
+            padding: 20px 24px;
+            border-top: 1px solid var(--border-color);
+            line-height: 1.6;
+        }
+
+        /* FOOTER */
+        .footer-dark {
+            background-color: #080c14;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            padding-top: 56px;
+            padding-bottom: 32px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-title {
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-cyan-bright);
+        }
+
+        /* BOTÓN FLOTANTE ANIMADO DE WHATSAPP */
+        .wa-float-container {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .wa-float-tooltip {
+            background-color: var(--bg-card);
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 8px 16px;
+            border-radius: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--accent-cyan);
+        }
+
+        .wa-float-btn {
+            background-color: var(--wa-green);
+            color: #ffffff !important;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+            text-decoration: none;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .wa-float-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .wa-float-btn::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: var(--wa-green);
+            opacity: 0.7;
+            z-index: -1;
+            animation: pulseRing 2s infinite;
+        }
+
+        @keyframes pulseRing {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            50% { transform: scale(1.4); opacity: 0; }
+            100% { transform: scale(0.95); opacity: 0; }
+        }
+
+        @media (max-width: 991px) {
+            .hero-title { font-size: 2.2rem; }
+            .hero-section { padding: 40px 0; }
+            .coverage-card-hero { margin-top: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-none d-md-flex align-items-center gap-3">
+                <span><i class="fa-solid fa-headset me-1 text-info"></i> Central Comercial: <strong>+56 9 6584 0930</strong></span>
+                <span><i class="fa-solid fa-bolt me-1 text-warning"></i> Cobertura de Fibra Óptica e Instalación $0</span>
+            </div>
+            <div class="d-flex align-items-center gap-3 ms-auto ms-md-0">
+                <a href="#cobertura"><i class="fa-solid fa-location-dot me-1"></i> Consultar Factibilidad</a>
+                <span class="text-secondary">|</span>
+                <a href="https://wa.me/56965840930" target="_blank"><i class="fa-brands fa-whatsapp me-1 text-success"></i> Soporte 24/7</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR MASTER TV FHD -->
+    <nav class="navbar navbar-expand-lg fi-navbar py-3">
+        <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-3 m-0" href="#">
-                <div class="fi-logo-icon">
-                    <!-- SVG DEL LOGO DE RAYO CON FIBRAS -->
-                    <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 35 C 30 25, 45 40, 50 48 L 50 35 L 75 20 L 50 50 L 78 50 L 44 85 L 52 56 L 20 35 Z" fill="#00C4FF" stroke="#FFFFFF" stroke-width="2"/>
-                        <path d="M20 48 C 30 38, 42 50, 48 56" stroke="#00C4FF" stroke-width="4" stroke-linecap="round"/>
-                        <path d="M20 60 C 28 52, 38 60, 44 64" stroke="#00C4FF" stroke-width="4" stroke-linecap="round"/>
-                    </svg>
+                <div style="width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-purple) 100%); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(225, 29, 72, 0.4);">
+                    <i class="fa-solid fa-tv text-white fs-5"></i>
                 </div>
-                <span class="fi-brand-title">Fibra <span class="fi-brand-highlight">INTRANET</span></span>
+                <span class="fi-brand-title">MASTER <span class="fi-brand-highlight">TV FHD</span></span>
             </a>
-            <a href="https://wa.me/56965840930?text=Hola,%20quiero%20consultar%20cobertura%20con%20Fibra%20INTRANET" target="_blank" rel="noopener noreferrer" class="vf-btn-whatsapp py-2 px-3 fs-6">
-                <i class="fa-brands fa-whatsapp me-2" aria-hidden="true"></i> Contactar
-            </a>
+
+            <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navMasterCore">
+                <i class="fa-solid fa-bars fs-3"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMasterCore">
+                <ul class="navbar-nav mx-auto my-3 my-lg-0 gap-lg-1">
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#planes">Planes Dúo</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#beneficios">Beneficios FHD</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#cobertura">Cobertura</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#faq">Preguntas Frecuentes</a></li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-2">
+                    <a href="https://wa.me/56965840930?text=Hola%20MASTER%20TV%20FHD,%20quiero%20consultar%20por%20los%20planes%20Duo" target="_blank" class="btn btn-wa-primary" style="width: auto; padding: 10px 20px; font-size: 0.875rem;">
+                        <i class="fa-brands fa-whatsapp"></i> Contactar por WhatsApp
+                    </a>
+                </div>
+            </div>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <header class="container py-5">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-7 text-start">
-                
-                <span class="vf-badge vf-badge-green mb-3">
-                    <i class="fa-solid fa-bolt me-1" aria-hidden="true"></i> Cobertura en todo Chile • Instalación Gratis
-                </span>
-
-                <h1 class="display-3 fw-extrabold vf-text-title mb-3" style="letter-spacing: -1px; font-weight: 800;">
-                    La fibra óptica ultra rápida que <span class="vf-text-cyan" style="color: #0088CC !important;">acelera tu hogar.</span>
-                </h1>
-
-                <p class="fs-5 vf-text-muted mb-4 fw-medium">
-                    Conéctate a la red de <strong>Fibra INTRANET</strong> más estable de Chile. Disfruta de WiFi ilimitado, simetría total y las mejores promociones con canales HD y plataformas incluidas.
-                </p>
-
-                <!-- Beneficios principales -->
-                <div class="d-flex flex-wrap gap-2 mb-4">
-                    <span class="vf-card py-2 px-3 fs-6 fw-semibold"><i class="fa-solid fa-check text-success me-2" aria-hidden="true"></i>Sin contrato de amarra</span>
-                    <span class="vf-card py-2 px-3 fs-6 fw-semibold"><i class="fa-solid fa-check text-success me-2" aria-hidden="true"></i>Tarifa fija y transparente</span>
-                    <span class="vf-card py-2 px-3 fs-6 fw-semibold"><i class="fa-solid fa-check text-success me-2" aria-hidden="true"></i>Soporte 24/7 en WhatsApp</span>
-                </div>
-
-                <!-- Tarjeta Promo Destacada -->
-                <div class="vf-card vf-card-glow mb-4" style="max-width: 480px;">
-                    <span class="vf-badge vf-badge-cyan mb-2">⚡ PROMO DESTACADA</span>
-                    <h2 class="h3 fw-bold vf-text-title mb-1">DUO 600 MB x <span class="vf-text-cyan">$27.990</span> <small class="fs-6 vf-text-muted">/mes</small></h2>
-                    <p class="fs-6 text-white-50 mb-2">24% DCTO por 6 meses • Incluye HBO Max y 1 Deco Gratis</p>
-                    <span class="text-success fw-bold fs-6 d-block"><i class="fa-solid fa-circle-check me-1" aria-hidden="true"></i> Instalación GRATIS</span>
-                </div>
-
-                <!-- Botones CTA -->
-                <div class="d-flex flex-wrap gap-3">
-                    <a href="https://wa.me/56965840930?text=Hola,%20quiero%20consultar%20cobertura%20con%20Fibra%20INTRANET" target="_blank" rel="noopener noreferrer" class="vf-btn-whatsapp fs-5" aria-label="Consultar cobertura por WhatsApp">
-                        <i class="fa-brands fa-whatsapp me-2" aria-hidden="true"></i> Consultar Cobertura
-                    </a>
-                    <a href="#promos-fibra" class="vf-btn-outline fs-5" aria-label="Ver Planes de Internet y TV">
-                        Ver Promociones
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="col-lg-5 text-center">
-                <div class="vf-card vf-card-glow p-5">
-                    <div class="mb-4">
-                        <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 35 C 30 25, 45 40, 50 48 L 50 35 L 75 20 L 50 50 L 78 50 L 44 85 L 52 56 L 20 35 Z" fill="#00C4FF" stroke="#FFFFFF" stroke-width="2"/>
-                            <path d="M20 48 C 30 38, 42 50, 48 56" stroke="#00C4FF" stroke-width="4" stroke-linecap="round"/>
-                            <path d="M20 60 C 28 52, 38 60, 44 64" stroke="#00C4FF" stroke-width="4" stroke-linecap="round"/>
-                        </svg>
+    <header class="hero-section">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7">
+                    <div class="hero-badge mb-3">
+                        <i class="fa-solid fa-bolt"></i> Cobertura en todo Chile • Instalación Gratis
                     </div>
-                    <h3 class="fw-bold vf-text-title fs-2 mb-3">Fibra INTRANET</h3>
-                    <p class="vf-text-muted fs-6 mb-0">Disfruta la mejor red de Fibra Óptica con TV Ultra HD, plataformas de streaming como HBO Max, Disney+, UFC y Paramount+ incluidas en tus planes Dúo.</p>
+                    <h1 class="hero-title mb-3">
+                        La experiencia definitiva en <span class="hero-title-gradient">Televisión FHD y Fibra Óptica</span>
+                    </h1>
+                    <p class="hero-subtitle mb-4">
+                        Conéctate a la red de <strong>MASTER TV FHD</strong> más estable. Disfruta de WiFi ilimitado, simetría total y las mejores promociones con canales HD/FHD y plataformas de streaming integradas.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <span class="badge bg-dark border border-secondary px-3 py-2 text-white"><i class="fa-solid fa-check text-success me-2"></i>Sin contrato de amarra</span>
+                        <span class="badge bg-dark border border-secondary px-3 py-2 text-white"><i class="fa-solid fa-check text-success me-2"></i>Tarifa fija y transparente</span>
+                        <span class="badge bg-dark border border-secondary px-3 py-2 text-white"><i class="fa-solid fa-check text-success me-2"></i>Soporte 24/7 en WhatsApp</span>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="https://wa.me/56965840930?text=Hola%20MASTER%20TV%20FHD,%20quiero%20consultar%20cobertura" target="_blank" class="btn btn-wa-primary fs-6" style="width: auto; padding: 14px 28px;">
+                            <i class="fa-brands fa-whatsapp me-1"></i> Consultar Cobertura
+                        </a>
+                        <a href="#planes" class="btn btn-brand-gradient fs-6" style="padding: 14px 28px;">
+                            Ver Promociones Dúo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- HERO COVERAGE CARD -->
+                <div class="col-lg-5">
+                    <div class="coverage-card-hero">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div style="width: 40px; height: 40px; border-radius: 10px; background: rgba(6, 182, 212, 0.2); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan-bright);">
+                                <i class="fa-solid fa-satellite-dish fs-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="h5 fw-bold mb-0 text-white">Consulta tu Factibilidad</h3>
+                                <p class="text-muted small mb-0">MASTER TV FHD en tu sector</p>
+                            </div>
+                        </div>
+
+                        <form onsubmit="event.preventDefault(); submitHeroCoverage();">
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold text-muted">Comuna</label>
+                                <input type="text" id="heroComuna" class="form-control form-control-custom" placeholder="Ej: Santiago, Concepción, Viña del Mar" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold text-muted">Dirección Domiciliaria</label>
+                                <input type="text" id="heroDireccion" class="form-control form-control-custom" placeholder="Calle y número de casa o depto" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold text-muted">Plan de Interés</label>
+                                <select id="heroPlan" class="form-select form-select-custom">
+                                    <option value="PLAN DUO 940 MB ($32.990)">PLAN DUO 940 MB ($32.990) - Recomendado</option>
+                                    <option value="PLAN DUO 600 MB ($27.990)">PLAN DUO 600 MB ($27.990)</option>
+                                    <option value="PLAN DUO 800 MB ($37.990)">PLAN DUO 800 MB ($37.990) - Precio Fijo</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-wa-primary w-100 py-3">
+                                <i class="fa-brands fa-whatsapp fs-5"></i> Verificar Cobertura Ahora
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- SECCIÓN PROMOCIONES FIBRA INTRANET -->
-    <main id="promos-fibra" class="container py-5 border-top border-dark border-opacity-25">
-        <div class="text-center mb-5">
-            <span class="vf-badge vf-badge-pink mb-2">🔥 OFERTAS IMPERDIBLES</span>
-            <h2 class="display-4 fw-extrabold vf-text-title" style="font-weight: 800;">Promociones <span style="color: #0088CC !important;">Fibra INTRANET</span></h2>
-            <p class="vf-text-muted fs-5 fw-medium">Internet Fibra Óptica + TV Ultra HD con decodificador gratis e instalación sin costo</p>
-        </div>
+    <!-- PLANES COMERCIALES MASTER TV FHD -->
+    <section class="py-5" id="planes">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="badge bg-danger px-3 py-2 text-uppercase fw-bold rounded-pill mb-2">🔥 Ofertas Imperdibles</span>
+                <h2 class="display-5 fw-extrabold text-white">Promociones <span class="fi-brand-highlight">MASTER TV FHD</span></h2>
+                <p class="text-muted fs-5">Internet Fibra Óptica + TV Ultra HD/FHD con decodificador e instalación sin costo</p>
+            </div>
 
-        <div class="row g-4 justify-content-center">
-            
-            <!-- PLAN DUO 600 MB -->
-            <article class="col-lg-4 col-md-6">
-                <div class="vf-card h-100 d-flex flex-column text-start">
-                    <span class="vf-badge vf-badge-cyan mb-3 align-self-start">24% DCTO X 6 MESES</span>
-                    <h3 class="fw-bold vf-text-title h2 mb-0">DUO 600 MB</h3>
-                    <p class="vf-text-muted fs-6 mb-2">Antes: <del>$36.990</del></p>
-                    
-                    <div class="my-2 pb-3 border-bottom border-secondary">
-                        <span class="display-5 fw-bold vf-text-cyan">$27.990</span>
-                        <span class="vf-text-muted fs-6">/ mes</span>
+            <div class="row g-4 justify-content-center align-items-stretch">
+                
+                <!-- PLAN 1: DUO 600 MB -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="plan-card">
+                        <div>
+                            <span class="plan-badge-discount">24% DCTO X 6 MESES</span>
+                            <h3 class="plan-name">DUO 600 MB</h3>
+                            <p class="plan-old-price mb-0">Antes: $36.990</p>
+                        </div>
+
+                        <div class="plan-price-box">
+                            <div class="d-flex align-items-baseline gap-1">
+                                <span class="plan-price">$27.990</span>
+                                <span class="plan-period">/ mes</span>
+                            </div>
+                            <span class="text-success small fw-bold"><i class="fa-solid fa-circle-check me-1"></i> Instalación GRATIS</span>
+                        </div>
+
+                        <ul class="plan-features-list">
+                            <li><i class="fa-solid fa-circle-check text-success"></i> <strong>600 Mbps</strong> Fibra Óptica Simétrica</li>
+                            <li><i class="fa-solid fa-tv text-info"></i> TV HD/FHD Incluido</li>
+                            <li><i class="fa-solid fa-box text-warning"></i> <strong>1 Deco GRATIS</strong></li>
+                            <li><i class="fa-solid fa-bolt text-danger"></i> <strong>Instalación GRATIS</strong></li>
+                        </ul>
+
+                        <div class="mb-4">
+                            <span class="small fw-bold text-muted d-block mb-2">Plataformas Incluidas:</span>
+                            <div class="streaming-pills">
+                                <span class="streaming-pill"><i class="fa-solid fa-film"></i> HBO Max</span>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/56965840930?text=Hola%20MASTER%20TV%20FHD,%20quiero%20solicitar%20el%20plan%20DUO%20600%20MB%20por%20$27.990" target="_blank" class="btn btn-wa-primary">
+                            <i class="fa-brands fa-whatsapp me-1"></i> Contratar Plan
+                        </a>
                     </div>
-
-                    <ul class="list-unstyled my-3 vf-text-title fs-6 flex-grow-1">
-                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2" aria-hidden="true"></i> <strong>600 Mbps</strong> Fibra Óptica</li>
-                        <li class="mb-2"><i class="fa-solid fa-tv text-info me-2" aria-hidden="true"></i> TV HD Incluido</li>
-                        <li class="mb-2"><i class="fa-solid fa-box text-warning me-2" aria-hidden="true"></i> <strong>1 Deco GRATIS</strong></li>
-                        <li class="mb-2"><i class="fa-solid fa-bolt text-danger me-2" aria-hidden="true"></i> <strong>Instalación GRATIS</strong></li>
-                    </ul>
-
-                    <div class="d-flex flex-wrap gap-2 mb-4">
-                        <span class="streaming-tag"><i class="fa-solid fa-film" aria-hidden="true"></i> HBO Max</span>
-                    </div>
-
-                    <a href="https://wa.me/56965840930?text=Hola,%20quiero%20solicitar%20el%20plan%20DUO%20600%20MB%20por%20$27.990%20con%20Fibra%20INTRANET" target="_blank" rel="noopener noreferrer" class="vf-btn-whatsapp text-center w-100 fs-6" aria-label="Contratar plan DUO 600 MB">
-                        <i class="fa-brands fa-whatsapp me-2" aria-hidden="true"></i> Contratar Plan
-                    </a>
                 </div>
-            </article>
 
-            <!-- PLAN DUO 940 MB -->
-            <article class="col-lg-4 col-md-6">
-                <div class="vf-card vf-card-glow h-100 d-flex flex-column text-start">
-                    <span class="vf-badge vf-badge-pink mb-3 align-self-start">37% DCTO X 12 MESES</span>
-                    <h3 class="fw-bold vf-text-title h2 mb-0">DUO 940 MB</h3>
-                    <p class="vf-text-muted fs-6 mb-2">Antes: <del>$52.990</del></p>
-                    
-                    <div class="my-2 pb-3 border-bottom border-secondary">
-                        <span class="display-5 fw-bold vf-text-cyan">$32.990</span>
-                        <span class="vf-text-muted fs-6">/ mes</span>
+                <!-- PLAN 2: DUO 940 MB (DESTACADO) -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="plan-card featured">
+                        <span class="plan-badge-featured">⚡ PROMO DESTACADA • MÁS POPULAR</span>
+                        
+                        <div>
+                            <span class="plan-badge-discount">37% DCTO X 12 MESES</span>
+                            <h3 class="plan-name">DUO 940 MB</h3>
+                            <p class="plan-old-price mb-0">Antes: $52.990</p>
+                        </div>
+
+                        <div class="plan-price-box">
+                            <div class="d-flex align-items-baseline gap-1">
+                                <span class="plan-price" style="color: var(--accent-cyan-bright);">$32.990</span>
+                                <span class="plan-period">/ mes</span>
+                            </div>
+                            <span class="text-success small fw-bold"><i class="fa-solid fa-circle-check me-1"></i> Instalación GRATIS</span>
+                        </div>
+
+                        <ul class="plan-features-list">
+                            <li><i class="fa-solid fa-circle-check text-success"></i> <strong>940 Mbps</strong> Ultra Velocidad Simétrica</li>
+                            <li><i class="fa-solid fa-tv text-info"></i> TV HD/FHD Incluido</li>
+                            <li><i class="fa-solid fa-box text-warning"></i> <strong>1 Deco GRATIS</strong></li>
+                            <li><i class="fa-solid fa-bolt text-danger"></i> <strong>Instalación GRATIS</strong></li>
+                        </ul>
+
+                        <div class="mb-4">
+                            <span class="small fw-bold text-muted d-block mb-2">Plataformas Incluidas:</span>
+                            <div class="streaming-pills">
+                                <span class="streaming-pill"><i class="fa-solid fa-play"></i> Disney+</span>
+                                <span class="streaming-pill"><i class="fa-solid fa-film"></i> HBO Max</span>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/56965840930?text=Hola%20MASTER%20TV%20FHD,%20quiero%20solicitar%20el%20plan%20DUO%20940%20MB%20por%20$32.990" target="_blank" class="btn btn-wa-primary">
+                            <i class="fa-brands fa-whatsapp me-1"></i> Contratar Plan
+                        </a>
                     </div>
-
-                    <ul class="list-unstyled my-3 vf-text-title fs-6 flex-grow-1">
-                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2" aria-hidden="true"></i> <strong>940 Mbps</strong> Ultra Velocidad</li>
-                        <li class="mb-2"><i class="fa-solid fa-tv text-info me-2" aria-hidden="true"></i> TV HD Incluido</li>
-                        <li class="mb-2"><i class="fa-solid fa-box text-warning me-2" aria-hidden="true"></i> <strong>1 Deco GRATIS</strong></li>
-                        <li class="mb-2"><i class="fa-solid fa-bolt text-danger me-2" aria-hidden="true"></i> <strong>Instalación GRATIS</strong></li>
-                    </ul>
-
-                    <div class="d-flex flex-wrap gap-2 mb-4">
-                        <span class="streaming-tag"><i class="fa-solid fa-play" aria-hidden="true"></i> Disney+</span>
-                        <span class="streaming-tag"><i class="fa-solid fa-film" aria-hidden="true"></i> HBO Max</span>
-                    </div>
-
-                    <a href="https://wa.me/56965840930?text=Hola,%20quiero%20solicitar%20el%20plan%20DUO%20940%20MB%20por%20$32.990%20con%20Fibra%20INTRANET" target="_blank" rel="noopener noreferrer" class="vf-btn-whatsapp text-center w-100 fs-6" aria-label="Contratar plan DUO 940 MB">
-                        <i class="fa-brands fa-whatsapp me-2" aria-hidden="true"></i> Contratar Plan
-                    </a>
                 </div>
-            </article>
 
-            <!-- PLAN DUO 800 MB -->
-            <article class="col-lg-4 col-md-6">
-                <div class="vf-card h-100 d-flex flex-column text-start">
-                    <span class="vf-badge vf-badge-green mb-3 align-self-start">PRECIO FIJO POR SIEMPRE</span>
-                    <h3 class="fw-bold vf-text-title h2 mb-0">DUO 800 MB</h3>
-                    <p class="vf-text-muted fs-6 mb-2">Precio Fijo Garantizado</p>
-                    
-                    <div class="my-2 pb-3 border-bottom border-secondary">
-                        <span class="display-5 fw-bold vf-text-cyan">$37.990</span>
-                        <span class="vf-text-muted fs-6">/ mes</span>
+                <!-- PLAN 3: DUO 800 MB -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="plan-card">
+                        <div>
+                            <span class="plan-badge-fixed">PRECIO FIJO POR SIEMPRE</span>
+                            <h3 class="plan-name">DUO 800 MB</h3>
+                            <p class="text-muted small mb-0">Precio Fijo Garantizado</p>
+                        </div>
+
+                        <div class="plan-price-box">
+                            <div class="d-flex align-items-baseline gap-1">
+                                <span class="plan-price">$37.990</span>
+                                <span class="plan-period">/ mes</span>
+                            </div>
+                            <span class="text-success small fw-bold"><i class="fa-solid fa-circle-check me-1"></i> Instalación GRATIS</span>
+                        </div>
+
+                        <ul class="plan-features-list">
+                            <li><i class="fa-solid fa-circle-check text-success"></i> <strong>800 Mbps</strong> Sin Variaciones</li>
+                            <li><i class="fa-solid fa-tv text-info"></i> TV HD/FHD Incluido</li>
+                            <li><i class="fa-solid fa-box text-warning"></i> <strong>1 Deco GRATIS</strong></li>
+                            <li><i class="fa-solid fa-bolt text-danger"></i> <strong>Instalación GRATIS</strong></li>
+                        </ul>
+
+                        <div class="mb-4">
+                            <span class="small fw-bold text-muted d-block mb-2">Plataformas Incluidas:</span>
+                            <div class="streaming-pills">
+                                <span class="streaming-pill"><i class="fa-solid fa-hand-fist"></i> UFC</span>
+                                <span class="streaming-pill"><i class="fa-solid fa-mountain"></i> Paramount+</span>
+                                <span class="streaming-pill"><i class="fa-solid fa-film"></i> HBO Max</span>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/56965840930?text=Hola%20MASTER%20TV%20FHD,%20quiero%20solicitar%20el%20plan%20DUO%20800%20MB%20por%20$37.990" target="_blank" class="btn btn-wa-primary">
+                            <i class="fa-brands fa-whatsapp me-1"></i> Contratar Plan
+                        </a>
                     </div>
-
-                    <ul class="list-unstyled my-3 vf-text-title fs-6 flex-grow-1">
-                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2" aria-hidden="true"></i> <strong>800 Mbps</strong> Sin Variaciones</li>
-                        <li class="mb-2"><i class="fa-solid fa-tv text-info me-2" aria-hidden="true"></i> TV HD Incluido</li>
-                        <li class="mb-2"><i class="fa-solid fa-box text-warning me-2" aria-hidden="true"></i> <strong>1 Deco GRATIS</strong></li>
-                        <li class="mb-2"><i class="fa-solid fa-bolt text-danger me-2" aria-hidden="true"></i> <strong>Instalación GRATIS</strong></li>
-                    </ul>
-
-                    <div class="d-flex flex-wrap gap-2 mb-4">
-                        <span class="streaming-tag"><i class="fa-solid fa-hand-fist" aria-hidden="true"></i> UFC</span>
-                        <span class="streaming-tag"><i class="fa-solid fa-mountain" aria-hidden="true"></i> Paramount+</span>
-                        <span class="streaming-tag"><i class="fa-solid fa-film" aria-hidden="true"></i> HBO Max</span>
-                    </div>
-
-                    <a href="https://wa.me/56965840930?text=Hola,%20quiero%20solicitar%20el%20plan%20DUO%20800%20MB%20por%20$37.990%20con%20Fibra%20INTRANET" target="_blank" rel="noopener noreferrer" class="vf-btn-whatsapp text-center w-100 fs-6" aria-label="Contratar plan DUO 800 MB">
-                        <i class="fa-brands fa-whatsapp me-2" aria-hidden="true"></i> Contratar Plan
-                    </a>
                 </div>
-            </article>
 
+            </div>
+
+            <!-- BANNER DE INSTALACIÓN GRATIS -->
+            <div class="banner-installation mt-5 text-center">
+                <h3 class="h2 fw-bold text-white mb-2">⚡ ¡INSTALACIÓN 100% GRATIS EN TODOS LOS PLANES!</h3>
+                <p class="fs-5 text-muted mb-4">MASTER TV FHD: Internet Fibra Óptica y TV Ultra HD/FHD con atención y soporte 24/7</p>
+                <a href="https://wa.me/56965840930?text=Hola%20MASTER%20TV%20FHD,%20quiero%20aprovechar%20la%20instalacion%20gratis" target="_blank" class="btn btn-wa-primary fs-5" style="width: auto; padding: 12px 32px;">
+                    <i class="fa-brands fa-whatsapp me-2"></i> Hablar con un Asesor
+                </a>
+            </div>
         </div>
+    </section>
 
-        <!-- BANNER DE INSTALACIÓN GRATIS -->
-        <div class="promo-banner mt-5 text-center text-white">
-            <h3 class="display-6 fw-bold mb-2">⚡ ¡INSTALACIÓN 100% GRATIS EN TODOS LOS PLANES!</h3>
-            <p class="fs-5 mb-3 text-white-50">Fibra INTRANET: Internet Fibra Óptica y TV Ultra HD con atención y soporte 24/7</p>
-            <a href="https://wa.me/56965840930?text=Hola,%20quiero%20aprovechar%20la%20instalacion%20gratis%20con%20Fibra%20INTRANET" target="_blank" rel="noopener noreferrer" class="vf-btn-whatsapp fs-5">
-                <i class="fa-brands fa-whatsapp me-2" aria-hidden="true"></i> Hablar con un Asesor
-            </a>
+    <!-- SECCIÓN DE BENEFICIOS DE MASTER TV FHD -->
+    <section class="py-5" id="beneficios" style="background-color: var(--bg-dark);">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="badge bg-info bg-opacity-10 text-info px-3 py-2 rounded-pill fw-bold mb-2">¿Por qué elegirnos?</span>
+                <h2 class="h1 fw-bold text-white">Beneficios MASTER TV FHD</h2>
+                <p class="text-muted">Tecnología de punta diseñada para entretenimiento exigente.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-tv"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-white mb-2">Calidad FHD y 4K</h4>
+                        <p class="text-muted small mb-0">Señal de alta definición sin compresión excesiva ni retardos en transmisiones en vivo.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-white mb-2">Decodificadores Smart</h4>
+                        <p class="text-muted small mb-0">Decos Android de última generación listos para instalar tus apps favoritas.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-white mb-2">Fibra Simétrica</h4>
+                        <p class="text-muted small mb-0">Misma velocidad de subida y bajada para jugar online y hacer videollamadas fluidas.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-white mb-2">Atención 24/7</h4>
+                        <p class="text-muted small mb-0">Soporte directo vía WhatsApp con ejecutivos para resolver tus consultas al instante.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </main>
+    </section>
 
-</div>
+    <!-- FORMULARIO EXTENDIDO DE COBERTURA -->
+    <section class="py-5" id="cobertura">
+        <div class="container py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-4">
+                        <h2 class="h2 fw-bold text-white">Verificador de Cobertura y Factibilidad</h2>
+                        <p class="text-muted">Completa los datos y te confirmaremos la disponibilidad técnica en tu domicilio.</p>
+                    </div>
 
-<!-- BOTÓN FLOTANTE ANIMADO DE WHATSAPP CON TOOLTIP -->
-<div class="vf-float-container">
-    <div class="vf-float-tooltip d-none d-md-block">
-        ¡Consulta tu Cobertura Aquí! 💬
+                    <div class="coverage-card-hero">
+                        <form id="formCoberturaFull" onsubmit="event.preventDefault(); submitFullCoverage();">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold text-muted">Nombre Completo</label>
+                                    <input type="text" id="fullNombre" class="form-control form-control-custom" placeholder="Ej: Carlos Silva" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold text-muted">Teléfono WhatsApp</label>
+                                    <input type="tel" id="fullTelefono" class="form-control form-control-custom" placeholder="+56 9 1234 5678" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold text-muted">Comuna</label>
+                                    <input type="text" id="fullComuna" class="form-control form-control-custom" placeholder="Ej: Maipú, Antofagasta, Temuco" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold text-muted">Dirección Domiciliaria</label>
+                                    <input type="text" id="fullDireccion" class="form-control form-control-custom" placeholder="Ej: Av. Las Condes 1234, Depto 201" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label small fw-bold text-muted">Plan Seleccionado</label>
+                                    <select id="fullPlan" class="form-select form-select-custom">
+                                        <option value="PLAN DUO 940 MB ($32.990)">PLAN DUO 940 MB ($32.990/mes) - Más Popular</option>
+                                        <option value="PLAN DUO 600 MB ($27.990)">PLAN DUO 600 MB ($27.990/mes)</option>
+                                        <option value="PLAN DUO 800 MB ($37.990)">PLAN DUO 800 MB ($37.990/mes) - Precio Fijo</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-wa-primary py-3 fs-6">
+                                        <i class="fa-brands fa-whatsapp fs-5"></i> Solicitar Factibilidad con MASTER TV FHD
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES -->
+    <section class="py-5 bg-dark" id="faq">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="badge bg-secondary px-3 py-2 rounded-pill fw-bold mb-2">Preguntas Frecuentes</span>
+                <h2 class="h2 fw-bold text-white">Resuelve tus dudas con MASTER TV FHD</h2>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion accordion-dark" id="faqAccordion">
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    ¿Cuánto demora la instalación de MASTER TV FHD?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Una vez confirmada la cobertura técnica en tu dirección, el agendamiento se realiza dentro de 24 a 48 horas hábiles. La instalación y decodificador son 100% gratuitos.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    ¿Cómo se activa el Decodificador incluido?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    El equipo decodificador se entrega configurado e instalado por el técnico. Sólo requieres conectarlo a tu pantalla para acceder de inmediato a la grilla de canales en FHD y a tus aplicaciones.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    ¿Hay contrato con permanencia forzada?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    No. En MASTER TV FHD no exigimos contratos de amarra. Tienes la libertad de mantener el servicio por el tiempo que desees sin multas por retiro.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    ¿Cómo funcionan las aplicaciones de streaming incluidas?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Según el plan Dúo contratado (HBO Max, Disney+, UFC, Paramount+), se te enviarán los accesos para vincular tu cuenta y disfrutar del contenido directamente en tus dispositivos o Deco Smart.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER MASTER TV FHD -->
+    <footer class="footer-dark">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <div style="width: 38px; height: 38px; border-radius: 10px; background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-purple) 100%); display: flex; align-items: center; justify-content: center;">
+                            <i class="fa-solid fa-tv text-white"></i>
+                        </div>
+                        <span class="fi-brand-title fs-5">MASTER <span class="fi-brand-highlight">TV FHD</span></span>
+                    </div>
+                    <p class="text-muted small">Tu proveedor confiable de Televisión en Alta Definición FHD e Internet Fibra Óptica Simétrica en Chile.</p>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <h4 class="footer-title">Planes Dúo</h4>
+                    <ul class="footer-links">
+                        <li><a href="#planes">DUO 600 MB</a></li>
+                        <li><a href="#planes">DUO 940 MB</a></li>
+                        <li><a href="#planes">DUO 800 MB</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <h4 class="footer-title">Contacto Comercial</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://wa.me/56965840930" target="_blank">WhatsApp: +56 9 6584 0930</a></li>
+                        <li><a href="#cobertura">Factibilidad en Línea</a></li>
+                        <li><a href="#faq">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-title">Garantías</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Instalación $0 Gratis</a></li>
+                        <li><a href="#">Decodificador Incluido</a></li>
+                        <li><a href="#">Soporte Técnico 24/7</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-4 border-top border-secondary border-opacity-25 text-center text-muted small">
+                <p class="mb-0">&copy; 2026 MASTER TV FHD. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP MASTER TV FHD -->
+    <div class="wa-float-container">
+        <div class="wa-float-tooltip d-none d-md-block">
+            ¡Habla con un asesor de MASTER TV FHD! 💬
+        </div>
+        <a href="https://wa.me/56965840930?text=Hola%20MASTER%20TV%20FHD,%20necesito%20informacion%20sobre%20los%20planes" target="_blank" class="wa-float-btn" aria-label="Contacto por WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
     </div>
-    <a href="https://wa.me/56965840930?text=Hola,%20necesito%20informacion%20sobre%20las%20promociones%20de%20Fibra%20INTRANET" target="_blank" rel="noopener noreferrer" class="vf-btn-float-wa" aria-label="Contacto por WhatsApp">
-        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-    </a>
-</div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function submitHeroCoverage() {
+            const comuna = document.getElementById('heroComuna').value.trim();
+            const direccion = document.getElementById('heroDireccion').value.trim();
+            const plan = document.getElementById('heroPlan').value;
+
+            if (comuna && direccion) {
+                const message = encodeURIComponent(
+                    `Hola MASTER TV FHD, quiero verificar cobertura:\n` +
+                    `• Comuna: ${comuna}\n` +
+                    `• Dirección: ${direccion}\n` +
+                    `• Plan: ${plan}`
+                );
+                window.open(`https://wa.me/56965840930?text=${message}`, '_blank');
+            }
+        }
+
+        function submitFullCoverage() {
+            const nombre = document.getElementById('fullNombre').value.trim();
+            const telefono = document.getElementById('fullTelefono').value.trim();
+            const comuna = document.getElementById('fullComuna').value.trim();
+            const direccion = document.getElementById('fullDireccion').value.trim();
+            const plan = document.getElementById('fullPlan').value;
+
+            if (nombre && comuna && direccion) {
+                const message = encodeURIComponent(
+                    `Hola MASTER TV FHD, solicito evaluación de factibilidad:\n` +
+                    `• Nombre: ${nombre}\n` +
+                    `• Teléfono: ${telefono}\n` +
+                    `• Comuna: ${comuna}\n` +
+                    `• Dirección: ${direccion}\n` +
+                    `• Plan elegido: ${plan}`
+                );
+                window.open(`https://wa.me/56965840930?text=${message}`, '_blank');
+            }
+        }
+    </script>
+</body>
+</html>
